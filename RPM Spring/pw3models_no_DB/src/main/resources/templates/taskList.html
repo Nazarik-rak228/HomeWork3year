@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Задания — TaskHub</title>
+</head>
+<body>
+<div class="container">
+    <h1>Задания</h1>
+
+    <div style="text-align:center; margin-bottom:15px;">
+        <a th:href="@{/}">← На главную</a> |
+        <a th:href="@{/admin}">← Админ-панель</a> |
+        <a th:href="@{/profile}">Профиль</a> |
+        <a th:href="@{/logout}">Выйти</a>
+    </div>
+
+    <h3>Поиск по ID / названию</h3>
+    <form th:action="@{/tasks/list}" method="get">
+        По ID:
+        <input type="number" name="id" th:value="${searchId}" placeholder="ID"/>
+        По названию:
+        <input type="text" name="title" th:value="${searchTitle}"/>
+        <button type="submit">Найти</button>
+        <a th:href="@{/tasks/list}">Сбросить</a>
+    </form>
+
+    <button onclick="document.getElementById('addForm').style.display='block'">+ Добавить задание</button>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Срок</th>
+            <th>Цена</th>
+            <th>Действия</th>
+        </tr>
+        <tr th:each="task : ${tasks}">
+            <form th:action="@{/tasks/update}" method="post">
+                <td><input type="hidden" name="id" th:value="${task.id}"/> <span th:text="${task.id}"></span></td>
+                <td><input type="text" name="title" th:value="${task.title}" required></td>
+                <td><input type="text" name="description" th:value="${task.description}" required></td>
+                <td><input type="date" name="deadline" th:value="${task.deadline}" required></td>
+                <td><input type="number" name="price" step="0.01" min="500" th:value="${task.price}"></td>
+                <td>
+                    <select name="userId" required>
+                        <option th:each="u : ${users}"
+                                th:value="${u.id}"
+                                th:selected="${task.user != null && task.user.id == u.id}"
+                                th:text="${u.username}">Пользователь</option>
+                    </select>
+                    <select name="categoryId" required>
+                        <option th:each="c : ${categories}"
+                                th:value="${c.id}"
+                                th:selected="${task.category != null && task.category.id == c.id}"
+                                th:text="${c.catName}">Категория</option>
+                    </select>
+                    <button type="submit">Сохранить</button>
+                </td>
+            </form>
+            <td>
+                <form th:action="@{/tasks/delete}" method="post">
+                    <input type="hidden" name="id" th:value="${task.id}"/>
+                    <button type="submit" class="danger" onclick="return confirm('Удалить?')">Удалить</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <p th:if="${#lists.isEmpty(tasks)}" style="text-align:center;">Заданий не найдено.</p>
+
+    <div id="addForm" style="display:none;">
+        <h3>Добавить новое задание</h3>
+        <form th:action="@{/tasks/add}" method="post">
+            Название: <input type="text" name="title" required><br>
+            Описание: <textarea name="description" rows="3" required></textarea><br>
+            Срок выполнения: <input type="date" name="deadline" required><br>
+            Цена (от 500): <input type="number" name="price" step="0.01" min="500" required><br>
+            Автор:
+            <select name="userId" required>
+                <option value="">Выберите автора</option>
+                <option th:each="u : ${users}" th:value="${u.id}" th:text="|${u.username} (${u.email})|">Пользователь</option>
+            </select><br>
+            Категория:
+            <select name="categoryId" required>
+                <option value="">Выберите категорию</option>
+                <option th:each="c : ${categories}" th:value="${c.id}" th:text="${c.catName}">Категория</option>
+            </select><br>
+            <button type="submit">Добавить задание</button>
+        </form>
+    </div>
+
+    <div class="pagination">
+        <a th:if="${currentPage > 1}"
+           th:href="@{/tasks/list(page=${currentPage - 1}, title=${searchTitle}, id=${searchId})}">
+            ← Назад
+        </a>
+        <a th:if="${currentPage < totalPages}"
+           th:href="@{/tasks/list(page=${currentPage + 1}, title=${searchTitle}, id=${searchId})}">
+            Вперёд →
+        </a>
+    </div>
+</div>
+</body>
+</html>

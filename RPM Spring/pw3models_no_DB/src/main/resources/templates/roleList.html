@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Роли</title>
+</head>
+<body>
+<h1>Роли пользователей</h1>
+<p style="text-align:center;"><a th:href="@{/admin}">← Админ-панель</a></p>
+
+<a href="/roles/list">Сбросить поиск</a><br><br>
+
+<form th:action="@{/roles/list}" method="get">
+    По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+    По названию роли: <input type="text" name="rolName" th:value="${searchRolName}" placeholder="Название роли"/>
+    <button type="submit">Найти</button>
+    <a href="/roles/list">Сбросить</a>
+</form>
+
+<br>
+<button onclick="document.getElementById('addForm').style.display='block'">Добавить роль</button>
+<table  style="margin-top: 15px;">
+    <tr>
+        <th>ID</th>
+        <th>Название роли</th>
+        <th>Действия</th>
+    </tr>
+    <tr th:each="role : ${roles}">
+        <form th:action="@{/roles/update}" method="post">
+            <td><input type="hidden" name="id" th:value="${role.id}" /><span th:text="${role.id}"></span></td>
+            <td><input type="text" name="rolName" th:value="${role.rolName}" style="width:200px"></td>
+            <td>
+                <button type="submit">Сохранить</button>
+            </td>
+        </form>
+        <td>
+            <form th:action="@{/roles/delete}" method="post" style="display:inline;">
+                <input type="hidden" name="id" th:value="${role.id}"/>
+                <button type="submit" onclick="return confirm('Удалить?')">Удалить</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<div style="margin-top:20px;">
+
+    <!-- Назад -->
+    <a th:if="${currentPage > 1}"
+       th:href="@{/roles/list(page=${currentPage - 1}, rolName=${searchRolName}, id=${searchId})}">
+        ← Назад
+    </a>
+
+    <!-- Вперёд -->
+    <a th:if="${currentPage < totalPages}"
+       th:href="@{/roles/list(page=${currentPage + 1}, rolName=${searchRolName}, id=${searchId})}">
+        Вперёд →
+    </a>
+
+</div>
+<!--добавления-->
+<div id="addForm" style="display:none; margin-top:20px; border:1px solid #ccc; padding:15px;">
+    <h3>Добавить новую роль</h3>
+    <form th:action="@{/roles/add}" method="post">
+        Название роли: <input type="text" name="rolName" required><br><br>
+        <button type="submit">Добавить роль</button>
+    </form>
+</div>
+</body>
+</html>

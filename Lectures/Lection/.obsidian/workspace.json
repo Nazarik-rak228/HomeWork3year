@@ -1,0 +1,228 @@
+{
+  "main": {
+    "id": "7cc99cb4bbcd6f64",
+    "type": "split",
+    "children": [
+      {
+        "id": "e4da5a50d2879f4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "084033169cf5d81b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "1 DS Dev and Protect Data Base Technologies/Лекция 1. Numpy, матрицы и базовые понятия в аналитике данных.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Лекция 1. Numpy, матрицы и базовые понятия в аналитике данных"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a0b56c153b0e5e41",
+    "type": "split",
+    "children": [
+      {
+        "id": "713d956269cee376",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d4a960d0905df05",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "fe1aa36bc4ac8a97",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "f06d7690794b4bfa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "0cd26a36b3892831",
+    "type": "split",
+    "children": [
+      {
+        "id": "a93d6783235063ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fef35b6d7cddc169",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Dev and Protect Data Base Technologies/Лекция 1 Machine Leaning.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки"
+            }
+          },
+          {
+            "id": "04f2dc085af89e25",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Dev and Protect Data Base Technologies/Лекция 1 Machine Leaning.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки"
+            }
+          },
+          {
+            "id": "5316a64d742d2c86",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "aca91dd632ae9f2a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Все свойства"
+            }
+          },
+          {
+            "id": "f91fe021416405ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Dev and Protect Data Base Technologies/Лекция 1 Machine Leaning.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "bases:Создать новую базу": false
+    }
+  },
+  "active": "084033169cf5d81b",
+  "lastOpenFiles": [
+    "1 DS Dev and Protect Data Base Technologies/Организационные моменты.md",
+    "1 DS Dev and Protect Data Base Technologies/Лекция 2.md",
+    "1 DS Dev and Protect Data Base Technologies/Лекция 1. Numpy, матрицы и базовые понятия в аналитике данных.pdf",
+    "English/Questions.md",
+    "1 DS Dev and Protect Data Base Technologies/Лекция 1 ---.md",
+    "2 ML  Dev and Protect Data Base Technologies/Лекция 1 Machine Leaning.md",
+    "Sistem Programming/Лекция 1 ---ВВЕДЕНИЕ В ARDUINO---.md",
+    "RPM ASP.NET/Без названия.md",
+    "English/1 пара.md",
+    "English/Практическая работа 1.md",
+    "Sistem Programming/Без названия.md",
+    "Sistem Programming/Лекция 2.md",
+    "RPM ASP.NET/Эндпоинты.md",
+    "Sistem Programming/photo",
+    "Sistem Programming/photo/Pasted image 20260912120917.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910162522.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910163428.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910163426.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910162555.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910162532.png",
+    "RPM Dart/photo/Pasted image 20260905150253.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910162549.png",
+    "1 DS Dev and Protect Data Base Technologies/photo/Pasted image 20260910162540.png",
+    "RPM Dart/photo/photo_2026-09-10_13-06-03.jpg",
+    "RPM Dart/Пара 2.md",
+    "RPM Dart/Пара 1.md",
+    "RPM Dart/photo",
+    "RPM Dart",
+    "RPM ASP.NET",
+    "1 DS Dev and Protect Data Base Technologies/photo",
+    "English",
+    "2 ML  Dev and Protect Data Base Technologies/photo",
+    "1 DS Dev and Protect Data Base Technologies",
+    "Добро пожаловать.md",
+    "2 ML  Dev and Protect Data Base Technologies"
+  ]
+}

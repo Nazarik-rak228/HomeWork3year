@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сообщения</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Личные сообщения</h1>
+<p style="text-align:center;"><a th:href="@{/admin}">← Админ-панель</a></p>
+
+
+<form th:action="@{/messages/list}" method="get">
+    По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+    По sender ID: <input type="number" name="senderId" th:value="${searchSenderId}" placeholder="ID отправителя"/>
+    <button type="submit">Найти</button>
+    <a href="/messages/list">Сбросить</a>
+</form>
+<br>
+<button onclick="document.getElementById('addForm').style.display='block'">Отправить сообщение</button>
+<table border="1" style="margin-top: 15px; width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>Отправитель</th>
+        <th>Получатель</th>
+        <th>Текст</th>
+        <th>Дата</th>
+        <th>Действия</th>
+    </tr>
+    <tr th:each="msg : ${messages}">
+        <form th:action="@{/messages/update}" method="post">
+            <td><input type="hidden" name="id" th:value="${msg.id}" /><span th:text="${msg.id}"></span></td>
+            <td><select name="senderId">
+                <option th:each="u : ${users}"
+                        th:value="${u.id}"
+                        th:text="${u.username}"
+                        th:selected="${msg.sender != null and u.id == msg.sender.id}">
+                </option>
+            </select></td>
+            <td><select name="receiverId">
+                <option th:each="u : ${users}"
+                        th:value="${u.id}"
+                        th:text="${u.username}"
+                        th:selected="${msg.receiver != null and u.id == msg.receiver.id}">
+                </option>
+            </select></td>
+            <td><input type="text" name="text" th:value="${msg.text}" style="width:350px"></td>
+            <td><span th:text="${msg.createdAt}"></span></td>
+            <td>
+                <button type="submit">Сохранить</button>
+            </td>
+        </form>
+        <td>
+            <form th:action="@{/messages/delete}" method="post" style="display:inline;">
+                <input type="hidden" name="id" th:value="${msg.id}"/>
+                <button type="submit" onclick="return confirm('Удалить сообщение?')">Удалить</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<div style="margin-top:20px;">
+
+    <!-- Назад -->
+    <a th:if="${currentPage > 1}"
+       th:href="@{/messages/list(page=${currentPage - 1}, senderId=${searchSenderId}, id=${searchId})}">
+        ← Назад
+    </a>
+
+    <!-- Вперёд -->
+    <a th:if="${currentPage < totalPages}"
+       th:href="@{/messages/list(page=${currentPage + 1}, senderId=${searchSenderId}, id=${searchId})}">
+        Вперёд →
+    </a>
+
+</div>
+
+<div id="addForm" style="display:none; margin-top:20px; border:1px solid #ccc; padding:15px;">
+    <h3>Новое сообщение</h3>
+    <form th:action="@{/messages/add}" method="post">
+        Sender ID: <input type="number" name="senderId" required><br>
+        Receiver ID: <input type="number" name="receiverId" required><br>
+        Текст: <textarea name="text" required></textarea><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+</body>
+</html>

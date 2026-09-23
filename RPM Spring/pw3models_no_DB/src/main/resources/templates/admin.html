@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/images/TaskHubLogo.png}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Админ-панель — TaskHub</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><img alt="TaskHub" th:src="@{/images/TaskHubLogo.png}"></li>
+            <li><a th:href="@{/}">Главная</a></li>
+            <li><a th:href="@{/admin}">Админ-панель</a></li>
+            <li><a th:href="@{/profile}">Профиль</a></li>
+            <li><a th:href="@{/messages}">Сообщения</a></li>
+            <li><a th:href="@{/logout}">Выйти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Админ-панель</h1>
+    <p style="text-align:center;">Выберите таблицу для редактирования, <b th:text="${currentUser != null ? currentUser.username : ''}"></b>.</p>
+
+    <div class="admin-cards">
+
+        <div class="admin-card" th:if="${currentUser != null && (currentUser.role == null || #strings.equals(currentUser.role.rolName, 'ADMIN'))}">
+            <h3>Пользователи</h3>
+            <p>Список, поиск, смена ролей</p>
+            <a class="btn" th:href="@{/users/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card" th:if="${currentUser != null && (currentUser.role == null || #strings.equals(currentUser.role.rolName, 'ADMIN'))}">
+            <h3>Роли</h3>
+            <p>Список и добавление ролей</p>
+            <a class="btn" th:href="@{/roles/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card" th:if="${currentUser != null && (currentUser.role == null || #strings.equals(currentUser.role.rolName, 'ADMIN'))}">
+            <h3>Категории</h3>
+            <p>Список и добавление категорий</p>
+            <a class="btn" th:href="@{/categories/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card"
+             th:if="${currentUser != null && currentUser.role != null && (#strings.equals(currentUser.role.rolName, 'ADMIN') || #strings.equals(currentUser.role.rolName, 'MANAGER'))}">
+            <h3>Задания</h3>
+            <p>Список, редактирование, удаление</p>
+            <a class="btn" th:href="@{/tasks/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card"
+             th:if="${currentUser != null && currentUser.role != null && (#strings.equals(currentUser.role.rolName, 'ADMIN') || #strings.equals(currentUser.role.rolName, 'MANAGER'))}">
+            <h3>Отклики</h3>
+            <p>Список и редактирование откликов</p>
+            <a class="btn" th:href="@{/responses/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card" th:if="${currentUser != null && (currentUser.role == null || #strings.equals(currentUser.role.rolName, 'ADMIN'))}">
+            <h3>Отзывы</h3>
+            <p>Список и редактирование отзывов</p>
+            <a class="btn" th:href="@{/reviews/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card" th:if="${currentUser != null && (currentUser.role == null || #strings.equals(currentUser.role.rolName, 'ADMIN'))}">
+            <h3>Сообщения</h3>
+            <p>Список и редактирование сообщений</p>
+            <a class="btn" th:href="@{/messages/list}">Открыть</a>
+        </div>
+
+        <div class="admin-card"
+             th:if="${currentUser != null && currentUser.role != null && (#strings.equals(currentUser.role.rolName, 'ADMIN') || #strings.equals(currentUser.role.rolName, 'MANAGER'))}">
+            <h3>Взятые задания</h3>
+            <p>Список и редактирование</p>
+            <a class="btn" th:href="@{/usertasks/list}">Открыть</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div>
+        <a th:href="@{/}">Главная</a>
+        <a th:href="@{/profile}">Профиль</a>
+        <p>© 2026 TaskHub — админ-панель</p>
+    </div>
+</footer>
+
+</body>
+</html>

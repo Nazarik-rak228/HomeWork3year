@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Взятые задания</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Взятые задания (UserTasks)</h1>
+<p style="text-align:center;"><a th:href="@{/admin}">← Админ-панель</a></p>
+
+<form th:action="@{/usertasks/list}" method="get">
+    По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+    По статусу: <input type="text" name="status" th:value="${searchStatus}" placeholder="в работе / завершено"/>
+    <button type="submit">Найти</button>
+    <a href="/usertasks/list">Сбросить</a>
+</form>
+<br>
+<button onclick="document.getElementById('addForm').style.display='block'">Добавить запись</button>
+<table border="1" style="margin-top: 15px; width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>User ID (исполнитель)</th>
+        <th>Task ID</th>
+        <th>Статус</th>
+        <th>Действия</th>
+    </tr>
+    <tr th:each="ut : ${userTasks}">
+        <form th:action="@{/usertasks/update}" method="post">
+            <td><input type="hidden" name="id" th:value="${ut.id}" /><span th:text="${ut.id}"></span></td>
+            <td><select name="userId">
+                <option th:each="u : ${users}"
+                        th:value="${u.id}"
+                        th:text="${u.username}"
+                        th:selected="${ut.user != null and u.id == ut.user.id}">
+                </option>
+            </select></td>
+            <td><input type="number" name="taskId" th:value="${ut.task.id}" style="width:80px"></td>
+            <td><input type="text" name="status" th:value="${ut.status}" style="width:150px"></td>
+            <td>
+                <button type="submit">Сохранить</button>
+            </td>
+        </form>
+        <td>
+            <form th:action="@{/usertasks/delete}" method="post" style="display:inline;">
+                <input type="hidden" name="id" th:value="${ut.id}"/>
+                <button type="submit" onclick="return confirm('Удалить?')">Удалить</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<div style="margin-top:20px;">
+
+    <!-- Назад -->
+    <a th:if="${currentPage > 1}"
+       th:href="@{/usertasks/list(page=${currentPage - 1}, status=${searchStatus}, id=${searchId})}">
+        ← Назад
+    </a>
+
+    <!-- Вперёд -->
+    <a th:if="${currentPage < totalPages}"
+       th:href="@{/usertasks/list(page=${currentPage + 1}, status=${searchStatus}, id=${searchId})}">
+        Вперёд →
+    </a>
+
+</div>
+
+
+<div id="addForm" style="display:none; margin-top:20px; border:1px solid #ccc; padding:15px;">
+    <h3>Добавить взятое задание</h3>
+    <form th:action="@{/usertasks/add}" method="post">
+        User ID: <input type="number" name="userId" required><br>
+        Task ID: <input type="number" name="taskId" required><br>
+        Статус: <input type="text" name="status" required><br><br>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+</body>
+</html>

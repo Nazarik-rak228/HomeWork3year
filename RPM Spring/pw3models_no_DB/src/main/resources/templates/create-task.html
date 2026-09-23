@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/images/TaskHubLogo.png}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Разместить задание — TaskHub</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><img alt="TaskHub" th:src="@{/images/TaskHubLogo.png}"></li>
+            <li><a th:href="@{/}">Главная</a></li>
+            <li><a href="/#tasks">Задания</a></li>
+            <li><a th:href="@{/tasks/create}">Разместить задание</a></li>
+            <li><a th:href="@{/profile}">Профиль</a></li>
+            <li><a th:href="@{/messages}">Сообщения</a></li>
+            <li><a th:href="@{/logout}">Выйти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Разместить новое задание</h1>
+
+    <p class="msg-error" th:if="${param.error == 'category'}">Выберите корректную категорию.</p>
+    <p class="msg-error" th:if="${param.error == 'invalid'}">Проверьте данные: дата должна быть в будущем, цена от 500 ₽.</p>
+
+    <form class="auth-form" th:action="@{/tasks/create}" method="post">
+        <input type="text" name="title" placeholder="Название задания" required>
+        <textarea name="description" rows="5" placeholder="Подробное описание..." required
+                  style="border:2px solid yellow; border-radius:20px; background-color:#3a3a3a; color:white; padding:10px;"></textarea>
+        <input type="number" name="price" placeholder="Бюджет (₽)" min="500" step="0.01" required>
+        <input type="date" name="deadline" required>
+        <select name="categoryId" required>
+            <option value="">Выберите категорию</option>
+            <option th:each="c : ${categories}" th:value="${c.id}" th:text="${c.catName}">Категория</option>
+        </select>
+        <button class="btn" type="submit">Опубликовать</button>
+    </form>
+
+    <p style="text-align:center;">Автор: <b th:text="${currentUser != null ? currentUser.username : ''}"></b></p>
+</main>
+
+<footer>
+    <div>
+        <a th:href="@{/}">Главная</a>
+        <a th:href="@{/profile}">О нас</a>
+        <p>© 2026 TaskHub Freelance</p>
+    </div>
+</footer>
+
+</body>
+</html>

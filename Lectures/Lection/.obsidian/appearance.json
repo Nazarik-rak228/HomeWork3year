@@ -1,0 +1,10 @@
+{
+  "cssTheme": "Monokai",
+  "theme": "moonstone",
+  "interfaceFontFamily": "Courier New",
+  "textFontFamily": "Times New Roman",
+  "monospaceFontFamily": "Buran USSR",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "accentColor": "#ffffff"
+}

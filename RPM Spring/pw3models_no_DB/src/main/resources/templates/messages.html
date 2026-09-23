@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/images/TaskHubLogo.png}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Сообщения — TaskHub</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><img alt="TaskHub" th:src="@{/images/TaskHubLogo.png}"></li>
+            <li><a th:href="@{/}">Главная</a></li>
+            <li><a th:href="@{/profile}">Профиль</a></li>
+            <li><a th:href="@{/messages}">Сообщения</a></li>
+            <li><a th:href="@{/logout}">Выйти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Сообщения</h1>
+
+    <p class="msg-success" th:if="${param.sent != null}" style="text-align:center;">Сообщение отправлено!</p>
+
+    <h2>Написать сообщение</h2>
+    <form class="auth-form" th:action="@{/messages/send}" method="post">
+        <select name="receiverId" required>
+            <option value="">Выберите получателя</option>
+            <option th:each="u : ${users}"
+                    th:if="${currentUser != null && u.id != currentUser.id}"
+                    th:value="${u.id}"
+                    th:text="${u.username}">Пользователь</option>
+        </select>
+        <textarea name="text" rows="3" placeholder="Текст сообщения..." required
+                  style="border:2px solid yellow; border-radius:20px; background-color:#3a3a3a; color:white; padding:10px;"></textarea>
+        <button class="btn" type="submit">Отправить</button>
+    </form>
+
+    <h2>Входящие / Исходящие</h2>
+    <div th:each="m : ${messages}" class="message-bubble">
+        <div class="msg-meta"
+             th:text="|${m.sender != null ? m.sender.username : 'неизвестно'} → ${m.receiver != null ? m.receiver.username : 'неизвестно'}|">
+            sender → receiver
+        </div>
+        <span th:text="${m.text}">Текст сообщения</span>
+        <div class="msg-meta" th:if="${m.createdAt != null}"
+             th:text="|${#temporals.format(m.createdAt, 'dd.MM.yyyy HH:mm')}|">дата</div>
+    </div>
+    <p th:if="${#lists.isEmpty(messages)}" style="text-align:center;">Сообщений пока нет.</p>
+</main>
+
+<footer>
+    <div>
+        <a th:href="@{/profile}">О нас</a>
+        <a th:href="@{/profile}">Политика конфиденциальности</a>
+        <p>© 2026 TaskHub Freelance</p>
+    </div>
+</footer>
+
+</body>
+</html>

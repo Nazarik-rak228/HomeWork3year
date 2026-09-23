@@ -1,0 +1,542 @@
+/* ===== ОСНОВНЫЕ НАСТРОЙКИ ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+/* ===== ШАПКА ===== */
+header {
+    background-color: rgb(175, 120, 0);
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #404040;
+    border: 2px solid yellow;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    min-height: 400px;
+    background-color: #4d4d4d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+h1, h2, h3 {
+    text-align: center;
+    color: yellow;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    border-bottom: 2px solid rgb(175, 120, 0);
+    padding-bottom: 10px;
+}
+
+/* ===== ССЫЛКИ ===== */
+a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px yellow;
+}
+
+/* ===== ГЛАВНАЯ: HERO ===== */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+    border: 2px solid yellow;
+    border-radius: 30px;
+    background-color: #3f3f3f;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hero-actions .btn {
+    margin: 0;
+}
+
+/* ===== ШАГИ «КАК ЭТО РАБОТАЕТ» ===== */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.step {
+    flex: 1;
+    min-width: 220px;
+    background-color: #3f3f3f;
+    border: 2px solid yellow;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.step:hover {
+    transform: translateY(-4px);
+}
+
+.step-num {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: rgb(175, 120, 0);
+    border: 2px solid yellow;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.step p {
+    margin: 0;
+    color: #d0d0d0;
+}
+
+/* ===== АДМИН-ПАНЕЛЬ ===== */
+.admin-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.admin-card {
+    flex: 1;
+    min-width: 230px;
+    max-width: 280px;
+    background-color: #3f3f3f;
+    border: 2px solid yellow;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.admin-card:hover {
+    transform: translateY(-4px);
+}
+
+.admin-card h3 {
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.admin-card p {
+    color: #d0d0d0;
+    margin: 0 0 15px;
+}
+
+.admin-card .btn {
+    margin: 0;
+}
+
+/* ===== КАРТОЧКИ ЗАДАНИЙ ===== */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-card {
+    border: 3px solid yellow;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+    padding: 1.4rem;
+    border-radius: 30px;
+    background-color: #3f3f3f;
+    transition: transform 0.2s ease-in-out;
+}
+
+.task-card:hover {
+    transform: scale(1.03);
+}
+
+.task-card h2 {
+    margin-top: 0;
+    color: #ffd700;
+}
+
+.task-card .description {
+    flex: 1;
+}
+
+.task-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.task-author {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+.price {
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.price:hover {
+    color: yellowgreen;
+}
+
+/* ===== ПОИСК ===== */
+.search-bar {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.search-bar input {
+    width: 85%;
+    box-sizing: border-box;
+}
+
+.search-field {
+    padding: 10px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+/* ===== ФОРМЫ И ИНПУТЫ ===== */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.search-bar form {
+    flex-wrap: nowrap;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="datetime-local"],
+textarea,
+select {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px yellow;
+}
+
+select option {
+    background-color: #3a3a3a;
+}
+
+/* ===== КНОПКИ ===== */
+button, .btn {
+    padding: 10px 20px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    background-color: rgb(175, 120, 0);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    margin: 10px 0;
+}
+
+button:hover, .btn:hover {
+    background-color: yellow;
+    color: black;
+    transform: scale(1.03);
+    border: 2px solid black;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button.danger {
+    background-color: #8b0000;
+}
+
+button.danger:hover {
+    background-color: red;
+}
+
+/* ===== ФОРМА В ПОЛНЫЙ СТОЛБЕЦ ===== */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.auth-form .btn {
+    margin-top: 15px;
+}
+
+/* ===== СООБЩЕНИЯ ОБ ОШИБКАХ ===== */
+.msg-error {
+    color: #ff6b6b;
+    text-align: center;
+    font-weight: bold;
+}
+
+.msg-success {
+    color: #6bff6b;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ===== ТАБЛИЦЫ ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #3a3a3a;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: rgb(175, 120, 0);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid yellow;
+}
+
+tr:nth-child(even) {
+    background-color: #424242;
+}
+
+tr:hover {
+    background-color: #4a4a4a;
+}
+
+td form {
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ===== ПАГИНАЦИЯ ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+}
+
+.pagination a {
+    padding: 8px 15px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    background-color: rgb(175, 120, 0);
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background-color: rgb(175, 120, 0);
+    color: black;
+    text-align: center;
+    padding: 5px;
+    width: auto;
+    margin: 10px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+footer div a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== ЧАТ (СООБЩЕНИЯ) ===== */
+.message-bubble {
+    background-color: #3f3f3f;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+
+.message-bubble .msg-meta {
+    font-size: 12px;
+    color: #cccccc;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .container, main {
+        width: 95%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        margin: 5px 8px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 2px solid yellow;
+        border-radius: 8px;
+        background: #3a3a3a;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #555;
+    }
+}

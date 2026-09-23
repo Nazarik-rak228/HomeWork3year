@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Отзывы</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Отзывы</h1>
+<p style="text-align:center;"><a th:href="@{/admin}">← Админ-панель</a></p>
+
+<form th:action="@{/reviews/list}" method="get">
+  По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+  По рейтингу: <input type="number" name="rating" th:value="${searchRating}" min="1" max="5" placeholder="1-5"/>
+  <button type="submit">Найти</button>
+  <a href="/reviews/list">Сбросить</a>
+</form>
+
+<br>
+<button onclick="document.getElementById('addForm').style.display='block'">Добавить отзыв</button>
+<table border="1" style="margin-top: 15px; width:100%;">
+  <tr>
+    <th>ID</th>
+    <th>От кого (Out ID)</th>
+    <th>Кому (In ID)</th>
+    <th>Рейтинг</th>
+    <th>Комментарий</th>
+    <th>Действия</th>
+  </tr>
+  <tr th:each="review : ${reviews}">
+    <form th:action="@{/reviews/update}" method="post">
+      <td><input type="hidden" name="id" th:value="${review.id}" /><span th:text="${review.id}"></span></td>
+      <td><select name="outUserId">
+        <option th:each="u : ${users}"
+                th:value="${u.id}"
+                th:text="${u.username}"
+                th:selected="${review.outUser != null and u.id == review.outUser.id}">
+        </option>
+      </select></td>
+      <td><select name="inUserId">
+        <option th:each="u : ${users}"
+                th:value="${u.id}"
+                th:text="${u.username}"
+                th:selected="${review.inUser != null and u.id == review.inUser.id}">
+        </option>
+      </select></td>
+      <td><input type="number" name="rating" th:value="${review.rating}" min="1" max="5" style="width:60px"></td>
+      <td><input type="text" name="comment" th:value="${review.comment}" style="width:250px"></td>
+      <td>
+        <button type="submit">Сохранить</button>
+      </td>
+    </form>
+    <td>
+      <form th:action="@{/reviews/delete}" method="post" style="display:inline;">
+        <input type="hidden" name="id" th:value="${review.id}"/>
+        <button type="submit" onclick="return confirm('Удалить отзыв?')">Удалить</button>
+      </form>
+    </td>
+  </tr>
+</table>
+
+<div style="margin-top:20px;">
+
+  <!-- Назад -->
+  <a th:if="${currentPage > 1}"
+     th:href="@{/reviews/list(page=${currentPage - 1}, rating=${searchRating}, id=${searchId})}">
+    ← Назад
+  </a>
+
+  <!-- Вперёд -->
+  <a th:if="${currentPage < totalPages}"
+     th:href="@{/reviews/list(page=${currentPage + 1}, rating=${searchRating}, id=${searchId})}">
+    Вперёд →
+  </a>
+
+</div>
+
+<div id="addForm" style="display:none; margin-top:20px; border:1px solid #ccc; padding:15px;">
+  <h3>Добавить отзыв</h3>
+  <form th:action="@{/reviews/add}" method="post">
+    От кого (User ID): <input type="number" name="outUserId" required><br>
+    Кому (User ID): <input type="number" name="inUserId" required><br>
+    Рейтинг (1-5): <input type="number" name="rating" min="1" max="5" required><br>
+    Комментарий: <input type="text" name="comment"><br><br>
+    <button type="submit">Добавить отзыв</button>
+  </form>
+</div>
+</body>
+</html>

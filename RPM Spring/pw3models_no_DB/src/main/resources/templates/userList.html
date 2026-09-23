@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Пользователи — управление ролями</title>
+</head>
+<body>
+<div class="container">
+    <h1>Пользователи — управление ролями</h1>
+
+    <div style="text-align:center; margin-bottom:15px;">
+        <a th:href="@{/}">← На главную</a> |
+        <a th:href="@{/admin}">← Админ-панель</a> |
+        <a th:href="@{/logout}">Выйти</a>
+    </div>
+
+    <h3>Поиск</h3>
+    <form th:action="@{/users/list}" method="get">
+        По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+        По username: <input type="text" name="username" th:value="${searchUsername}" placeholder="Имя пользователя"/>
+        <button type="submit">Найти</button>
+        <a th:href="@{/users/list}">Сбросить</a>
+    </form>
+
+    <button onclick="document.getElementById('addForm').style.display='block'">+ Добавить пользователя</button>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Роль</th>
+            <th>Смена роли (управление ролями)</th>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.role != null ? user.role.rolName : 'нет роли'}"></td>
+            <td>
+                <form th:action="@{/users/update}" method="post">
+                    <input type="hidden" name="id" th:value="${user.id}">
+                    <input type="hidden" name="username" th:value="${user.username}">
+                    <input type="hidden" name="email" th:value="${user.email}">
+                    <input type="hidden" name="password" value="keep">
+                    <select name="roleId" required>
+                        <option th:each="role : ${roles}"
+                                th:value="${role.id}"
+                                th:selected="${user.role != null && user.role.id == role.id}"
+                                th:text="${role.rolName}">Роль</option>
+                    </select>
+                    <button type="submit">Изменить роль</button>
+                </form>
+                <form th:action="@{/users/delete}" method="post">
+                    <input type="hidden" name="id" th:value="${user.id}">
+                    <button type="submit" class="danger" onclick="return confirm('Удалить пользователя?')">Удалить</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <p th:if="${#lists.isEmpty(users)}" style="text-align:center;">Пользователей не найдено.</p>
+
+    <div id="addForm" style="display:none;">
+        <h3>Добавить пользователя</h3>
+        <form th:action="@{/users/add}" method="post">
+            Username: <input type="text" name="username" required><br>
+            Email: <input type="email" name="email" required><br>
+            Пароль: <input type="password" name="password" required><br>
+            Роль:
+            <select name="roleId" required>
+                <option value="">Выберите роль</option>
+                <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.rolName}">Роль</option>
+            </select><br>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div class="pagination">
+        <a th:if="${currentPage > 1}"
+           th:href="@{/users/list(page=${currentPage - 1}, username=${searchUsername}, id=${searchId})}">
+            ← Назад
+        </a>
+        <a th:if="${currentPage < totalPages}"
+           th:href="@{/users/list(page=${currentPage + 1}, username=${searchUsername}, id=${searchId})}">
+            Вперёд →
+        </a>
+    </div>
+</div>
+</body>
+</html>

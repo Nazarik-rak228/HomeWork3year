@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/images/TaskHubLogo.png}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Доступ запрещён — TaskHub</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><img alt="TaskHub" th:src="@{/images/TaskHubLogo.png}"></li>
+            <li><a th:href="@{/}">Главная</a></li>
+            <li><a th:href="@{/profile}">Профиль</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1 style="color:#ff6b6b;">Доступ запрещён</h1>
+    <p style="text-align:center;">У вас недостаточно прав для просмотра данной страницы.</p>
+    <div style="text-align:center;">
+        <a class="btn" th:href="@{/}">На главную</a>
+    </div>
+</main>
+
+<footer>
+    <div>
+        <a th:href="@{/profile}">О нас</a>
+        <a th:href="@{/profile}">Политика конфиденциальности</a>
+        <p>© 2026 TaskHub Freelance</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Категории</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Категории заданий</h1>
+    <p style="text-align:center;"><a th:href="@{/admin}">← Админ-панель</a></p>
+    <form th:action="@{/categories/list}" method="get">
+        По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+        По названию: <input type="text" name="catName" th:value="${searchCatName}" placeholder="Название категории"/>
+        <button type="submit">Найти</button>
+        <a href="/categories/list">Сбросить</a>
+    </form>
+
+
+    <button onclick="document.getElementById('addForm').style.display='block'">Добавить категорию</button>
+
+    <table border="1" style="margin-top: 15px;">
+        <tr>
+            <th>ID</th>
+            <th>Название категории</th>
+            <th>Действия</th>
+        </tr>
+        <tr th:each="category : ${categories}">
+            <form th:action="@{/categories/update}" method="post">
+                <td><input type="hidden" name="id" th:value="${category.id}" /><span th:text="${category.id}"></span></td>
+                <td><input type="text" name="catName" th:value="${category.catName}" style="width:250px"></td>
+                <td>
+                    <button type="submit">Сохранить</button>
+                </td>
+            </form>
+            <td>
+                <form th:action="@{/categories/delete}" method="post" style="display:inline;">
+                    <input type="hidden" name="id" th:value="${category.id}"/>
+                    <button type="submit" onclick="return confirm('Удалить?')">Удалить</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <div style="margin-top:20px;">
+
+        <!-- Назад -->
+        <a th:if="${currentPage > 1}"
+           th:href="@{/categories/list(page=${currentPage - 1}, catName=${searchCatName}, id=${searchId})}">
+            ← Назад
+        </a>
+
+        <!-- Вперёд -->
+        <a th:if="${currentPage < totalPages}"
+           th:href="@{/categories/list(page=${currentPage + 1}, catName=${searchCatName}, id=${searchId})}">
+            Вперёд →
+        </a>
+
+    </div>
+    <div id="addForm" style="display:none; margin-top:20px; border:1px solid #ccc; padding:15px;">
+        <h3>Добавить категорию</h3>
+        <form th:action="@{/categories/add}" method="post">
+            Название: <input type="text" name="catName" required><br><br>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+</div>
+</body>
+
+
+</html>

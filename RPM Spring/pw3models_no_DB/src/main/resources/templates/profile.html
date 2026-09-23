@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/images/TaskHubLogo.png}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Профиль — TaskHub</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><img alt="TaskHub" th:src="@{/images/TaskHubLogo.png}"></li>
+            <li><a th:href="@{/}">Главная</a></li>
+            <li><a th:href="@{/tasks/create}">Разместить задание</a></li>
+            <li><a th:href="@{/profile}">Профиль</a></li>
+            <li><a th:href="@{/messages}">Сообщения</a></li>
+            <li><a th:href="@{/logout}">Выйти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Ваш профиль</h1>
+
+    <div style="text-align:center; margin-bottom:20px;">
+        <p th:text="|Логин: ${currentUser.username}|">Логин</p>
+        <p th:text="|Email: ${currentUser.email}|">Email</p>
+        <p th:text="|Роль: ${currentUser.role != null ? currentUser.role.rolName : 'не назначена'}|">Роль</p>
+    </div>
+
+    <h2>Созданные задания</h2>
+    <table th:if="${!#lists.isEmpty(myTasks)}">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Цена</th>
+            <th>Срок</th>
+        </tr>
+        <tr th:each="t : ${myTasks}">
+            <td th:text="${t.id}"></td>
+            <td><a th:href="@{/task/{id}(id=${t.id})}" th:text="${t.title}"></a></td>
+            <td th:text="|${#numbers.formatDecimal(t.price, 1, 'COMMA', 0, 'POINT')} ₽|"></td>
+            <td th:text="|${#temporals.format(t.deadline, 'dd.MM.yyyy')}|"></td>
+        </tr>
+    </table>
+    <p th:if="${#lists.isEmpty(myTasks)}" style="text-align:center;">Вы ещё не создали ни одного задания.</p>
+
+    <h2>Взятые задания</h2>
+    <table th:if="${!#lists.isEmpty(myUserTasks)}">
+        <tr>
+            <th>Задание</th>
+            <th>Статус</th>
+        </tr>
+        <tr th:each="ut : ${myUserTasks}">
+            <td th:text="${ut.task != null ? ut.task.title : '—'}"></td>
+            <td th:text="${ut.status}"></td>
+        </tr>
+    </table>
+    <p th:if="${#lists.isEmpty(myUserTasks)}" style="text-align:center;">Вы ещё не взяли ни одного задания.</p>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a class="btn" th:href="@{/tasks/create}">Разместить новое задание</a>
+        <a class="btn" th:href="@{/}">Найти задания</a>
+    </div>
+</main>
+
+<footer>
+    <div>
+        <a th:href="@{/profile}">О нас</a>
+        <a th:href="@{/profile}">Политика конфиденциальности</a>
+        <p>© 2026 TaskHub Freelance</p>
+    </div>
+</footer>
+
+</body>
+</html>

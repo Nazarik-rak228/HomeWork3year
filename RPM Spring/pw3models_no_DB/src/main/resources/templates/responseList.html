@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отклики</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Отклики на задания</h1>
+<p style="text-align:center;"><a th:href="@{/admin}">← Админ-панель</a></p>
+<form th:action="@{/responses/list}" method="get">
+    По ID: <input type="number" name="id" th:value="${searchId}" style="width:80px"/>
+    По статусу: <input type="text" name="status" th:value="${searchStatus}" placeholder="ожидает / принят / отклонён"/>
+    <button type="submit">Найти</button>
+    <a href="/responses/list">Сбросить</a>
+</form>
+
+<br>
+<button onclick="document.getElementById('addForm').style.display='block'">Добавить отклик</button>
+
+<table border="1" style="margin-top: 15px; width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>User ID</th>
+        <th>Task ID</th>
+        <th>Сообщение</th>
+        <th>Статус</th>
+        <th>Действия</th>
+    </tr>
+    <tr th:each="response : ${responses}">
+        <form th:action="@{/responses/update}" method="post">
+            <td><input type="hidden" name="id" th:value="${response.id}" /><span th:text="${response.id}"></span></td>
+            <td><select name="userId">
+                <option th:each="u : ${users}"
+                        th:value="${u.id}"
+                        th:text="${u.username}"
+                        th:selected="${response.user != null and u.id == response.user.id}">
+                </option>
+            </select></td>
+            <td><input type="number" name="taskId" th:value="${response.task.id}" style="width:80px"></td>
+            <td><input type="text" name="message" th:value="${response.message}" style="width:300px"></td>
+            <td><input type="text" name="status" th:value="${response.status}" style="width:120px"></td>
+            <td>
+                <button type="submit">Сохранить</button>
+            </td>
+        </form>
+        <td>
+            <form th:action="@{/responses/delete}" method="post" style="display:inline;">
+                <input type="hidden" name="id" th:value="${response.id}"/>
+                <button type="submit" onclick="return confirm('Удалить отклик?')">Удалить</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<div style="margin-top:20px;">
+
+    <!-- Назад -->
+    <a th:if="${currentPage > 1}"
+       th:href="@{/responses/list(page=${currentPage - 1}, status=${searchStatus}, id=${searchId})}">
+        ← Назад
+    </a>
+
+    <!-- Вперёд -->
+    <a th:if="${currentPage < totalPages}"
+       th:href="@{/responses/list(page=${currentPage + 1}, status=${searchStatus}, id=${searchId})}">
+        Вперёд →
+    </a>
+
+</div>
+<div id="addForm" style="display:none; margin-top:20px; border:1px solid #ccc; padding:15px;">
+    <h3>Добавить отклик</h3>
+    <form th:action="@{/responses/add}" method="post">
+        User ID: <input type="number" name="userId" required><br>
+        Task ID: <input type="number" name="taskId" required><br>
+        Сообщение: <textarea name="message"></textarea><br>
+        Статус: <input type="text" name="status" required><br><br>
+        <button type="submit">Добавить отклик</button>
+    </form>
+</div>
+</body>
+</html>
