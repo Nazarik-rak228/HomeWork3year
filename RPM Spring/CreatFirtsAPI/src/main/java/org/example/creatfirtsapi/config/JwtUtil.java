@@ -10,10 +10,6 @@ import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
-/**
- * Утилита для генерации и проверки JWT-токенов.
- * Токен содержит логин пользователя и его роль.
- */
 @Component
 public class JwtUtil {
 
@@ -26,7 +22,6 @@ public class JwtUtil {
         this.expirationMs = expirationMs;
     }
 
-    /** Создаёт подписанный JWT с указанным логином и ролью. */
     public String generateToken(String username, String role) {
         return Jwts.builder()
                 .subject(username)
@@ -37,7 +32,6 @@ public class JwtUtil {
                 .compact();
     }
 
-    /** Разбирает токен в claims (субъект, роль, срок действия). */
     private Claims parse(String token) {
         return Jwts.parser()
                 .verifyWith(key)
@@ -46,7 +40,6 @@ public class JwtUtil {
                 .getPayload();
     }
 
-    /** Проверяет, что токен валиден (подпись верна и срок не истёк). */
     public boolean isValid(String token) {
         try {
             parse(token);

@@ -29,7 +29,6 @@ public class TaskDto {
     @JoinColumn(name = "category_id", nullable = false)
     private CategoryDto category;
 
-    // Статус задания: Открыто / В работе / Завершено
     private String status;
 
     public TaskDto() {

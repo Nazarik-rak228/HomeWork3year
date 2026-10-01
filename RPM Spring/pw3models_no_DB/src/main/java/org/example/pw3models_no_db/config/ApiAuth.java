@@ -11,11 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.time.Duration;
 import java.util.Map;
 
-/**
- * Получает и кеширует JWT-токен для доступа к API.
- * Сайт авторизуется как сервисный пользователь (api.username / api.password),
- * после чего все запросы к API идут с заголовком Authorization: Bearer <токен>.
- */
+
 @Component
 public class ApiAuth {
 

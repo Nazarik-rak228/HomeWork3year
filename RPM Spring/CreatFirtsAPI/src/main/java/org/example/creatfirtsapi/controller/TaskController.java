@@ -119,7 +119,6 @@ public class TaskController {
                     user,
                     category
             );
-            // Если статус не передан — сохраняем текущий статус задачи
             if (status == null || status.isBlank()) {
                 task.setStatus(taskRepository.findById(id).map(TaskDto::getStatus).orElse(null));
             } else {

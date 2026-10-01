@@ -14,10 +14,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Фильтр проверяет заголовок Authorization: Bearer <JWT>,
- * и если токен валиден — кладёт пользователя в контекст безопасности.
- */
+
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
