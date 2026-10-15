@@ -1,4 +1,5 @@
 ﻿using API_First_Lesson.Models;
+using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
@@ -7,101 +8,79 @@ namespace API_First_Lesson.Controllers
     [ApiController]
     public class CartItemController : ControllerBase
     {
-        private readonly WebAppContext _context;
+        private readonly ICartItemService _cartItemService;
 
-        public CartItemController(WebAppContext context)
+        public CartItemController(ICartItemService cartItemService)
         {
-            _context = context;
+            _cartItemService = cartItemService;
         }
-
 
         [HttpGet]
-        public IActionResult GetCartItems(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> GetCartItems(int page = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var cartItems = _context.CartItems
-                .OrderBy(ci => ci.CartItemId)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-
-            return Ok(cartItems.Select(ToDto).ToList());
+            var (items, total) = await _cartItemService.GetAllAsync(page, pageSize, cancellationToken);
+            Response.Headers["X-Total-Count"] = total.ToString();
+            return Ok(items);
         }
 
-
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
         {
-            var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartItemId == id);
+            var cartItem = await _cartItemService.GetByIdAsync(id, cancellationToken);
             if (cartItem is null) return NotFound();
-
-            return Ok(ToDto(cartItem));
+            return Ok(cartItem);
         }
 
         [HttpPost]
-        public IActionResult Create(CartItemCreateDTO dto)
+        public async Task<IActionResult> Create(CartItemCreateDTO dto, CancellationToken cancellationToken)
         {
-            var cartItem = new CartItem
+            try
             {
-                CartId = dto.CartId,
-                ProductId = dto.ProductId,
-                Quantity = dto.Quantity
-            };
-
-            _context.CartItems.Add(cartItem);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetById), new { id = cartItem.CartItemId }, ToDto(cartItem));
+                var cartItem = await _cartItemService.CreateAsync(dto, cancellationToken);
+                return CreatedAtAction(nameof(GetById), new { id = cartItem.CartItemId }, cartItem);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
+
         [HttpPut("{id}")]
-        public IActionResult Update(int id, CartItemUpdateDTO dto)
+        public async Task<IActionResult> Update(int id, CartItemUpdateDTO dto, CancellationToken cancellationToken)
         {
-            var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartItemId == id);
-            if (cartItem is null) return NotFound();
-
-            cartItem.CartId = dto.CartId;
-            cartItem.ProductId = dto.ProductId;
-            cartItem.Quantity = dto.Quantity;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var cartItem = await _cartItemService.UpdateAsync(id, dto, cancellationToken);
+                if (cartItem is null) return NotFound();
+                return Ok(cartItem);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, CartItemPatchDTO dto)
+        public async Task<IActionResult> Patch(int id, CartItemPatchDTO dto, CancellationToken cancellationToken)
         {
-            var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartItemId == id);
-            if (cartItem is null) return NotFound();
-
-            if (dto.CartId is not null) cartItem.CartId = dto.CartId.Value;
-            if (dto.ProductId is not null) cartItem.ProductId = dto.ProductId.Value;
-            if (dto.Quantity is not null) cartItem.Quantity = dto.Quantity.Value;
-
-            _context.SaveChanges();
-
-            return NoContent();
-        }
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartItemId == id);
-            if (cartItem is null) return NotFound();
-
-            _context.CartItems.Remove(cartItem);
-            _context.SaveChanges();
-
-            return NoContent();
-        }
-
-        private CartItemDTO ToDto(CartItem cartItem)
-        {
-            return new CartItemDTO
+            try
             {
-                CartItemId = cartItem.CartItemId,
-                CartId = cartItem.CartId,
-                ProductId = cartItem.ProductId,
-                Quantity = cartItem.Quantity
-            };
+                var cartItem = await _cartItemService.PatchAsync(id, dto, cancellationToken);
+                if (cartItem is null) return NotFound();
+                return Ok(cartItem);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
+        {
+            var deleted = await _cartItemService.DeleteAsync(id, cancellationToken);
+            if (!deleted) return NotFound();
+            return NoContent();
         }
     }
 }

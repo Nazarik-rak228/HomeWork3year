@@ -1,4 +1,5 @@
 using API_First_Lesson.Models;
+using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
@@ -7,117 +8,109 @@ namespace API_First_Lesson.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly WebAppContext _context;
+        private readonly IProductService _productService;
 
-        public ProductController(WebAppContext context)
+        public ProductController(IProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
-
 
         [HttpGet]
-        public IActionResult GetProducts(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> GetProducts(int page = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var products = _context.Products
-                .OrderBy(p => p.ProductId)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-
-            return Ok(products.Select(ToDto).ToList());
+            var (items, total) = await _productService.GetAllAsync(page, pageSize, cancellationToken);
+            Response.Headers["X-Total-Count"] = total.ToString();
+            return Ok(items);
         }
-
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
         {
-            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+            var product = await _productService.GetByIdAsync(id, cancellationToken);
             if (product is null) return NotFound();
-
-            return Ok(ToDto(product));
+            return Ok(product);
         }
 
-
         [HttpPost]
-        public IActionResult Create(ProductCreateDTO dto)
+        public async Task<IActionResult> Create(ProductCreateDTO dto, CancellationToken cancellationToken)
         {
-            var product = new Product
+            try
             {
-                ProductName = dto.ProductName,
-                Price = dto.Price,
-                CategoryId = dto.CategoryId,
-                Discription = dto.Discription,
-                ImageData = dto.ImageData,
-                ImageMimeType = dto.ImageMimeType
-            };
-
-            _context.Products.Add(product);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetById), new { id = product.ProductId }, ToDto(product));
+                var product = await _productService.CreateAsync(dto, cancellationToken);
+                return CreatedAtAction(nameof(GetById), new { id = product.ProductId }, product);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, ProductUpdateDTO dto)
+        public async Task<IActionResult> Update(int id, ProductUpdateDTO dto, CancellationToken cancellationToken)
         {
-            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
-            if (product is null) return NotFound();
-
-            product.ProductName = dto.ProductName;
-            product.Price = dto.Price;
-            product.CategoryId = dto.CategoryId;
-            product.Discription = dto.Discription;
-            product.ImageData = dto.ImageData;
-            product.ImageMimeType = dto.ImageMimeType;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var product = await _productService.UpdateAsync(id, dto, cancellationToken);
+                if (product is null) return NotFound();
+                return Ok(product);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
-      
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, ProductPatchDTO dto)
+        public async Task<IActionResult> Patch(int id, ProductPatchDTO dto, CancellationToken cancellationToken)
         {
-            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
-            if (product is null) return NotFound();
-
-            if (dto.ProductName is not null) product.ProductName = dto.ProductName;
-            if (dto.Price is not null) product.Price = dto.Price.Value;
-            if (dto.CategoryId is not null) product.CategoryId = dto.CategoryId.Value;
-            if (dto.Discription is not null) product.Discription = dto.Discription;
-            if (dto.ImageData is not null) product.ImageData = dto.ImageData;
-            if (dto.ImageMimeType is not null) product.ImageMimeType = dto.ImageMimeType;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var product = await _productService.PatchAsync(id, dto, cancellationToken);
+                if (product is null) return NotFound();
+                return Ok(product);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
-            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
-            if (product is null) return NotFound();
-
-            _context.Products.Remove(product);
-            _context.SaveChanges();
-
+            var deleted = await _productService.DeleteAsync(id, cancellationToken);
+            if (!deleted) return NotFound();
             return NoContent();
         }
 
-        private ProductDTO ToDto(Product product)
+        [HttpPost("{id}/reserve")]
+        public async Task<IActionResult> Reserve(int id, ReserveProductDTO dto, CancellationToken cancellationToken)
         {
-            return new ProductDTO
+            try
             {
-                ProductId = product.ProductId,
-                ProductName = product.ProductName,
-                Price = product.Price,
-                CategoryId = product.CategoryId,
-                Discription = product.Discription,
-                ImageData = product.ImageData,
-                ImageMimeType = product.ImageMimeType
-            };
+                var product = await _productService.ReserveAsync(id, dto, cancellationToken);
+                if (product is null) return NotFound();
+                return Ok(product);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+        }
+
+        [HttpPost("{id}/cancel-reserve")]
+        public async Task<IActionResult> CancelReserve(int id, CancelReserveDTO dto, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var product = await _productService.CancelReserveAsync(id, dto, cancellationToken);
+                if (product is null) return NotFound(new { error = "Активный резерв по товару не найден." });
+                return Ok(product);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
     }
 }

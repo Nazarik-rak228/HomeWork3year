@@ -13,6 +13,10 @@ public partial class Order
 
     public decimal TotalAmount { get; set; }
 
+    public string Status { get; set; } = null!;
+
+    public virtual ICollection<OrderEvent> OrderEvents { get; set; } = new List<OrderEvent>();
+
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
     public virtual User User { get; set; } = null!;

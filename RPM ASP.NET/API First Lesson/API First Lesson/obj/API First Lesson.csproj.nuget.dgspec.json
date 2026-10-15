@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nazar\\Documents\\study\\P-8-24-Study\\3 Kypc\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj": {}
+    "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nazar\\Documents\\study\\P-8-24-Study\\3 Kypc\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj": {
+    "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nazar\\Documents\\study\\P-8-24-Study\\3 Kypc\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
         "projectName": "API First Lesson",
-        "projectPath": "C:\\Users\\nazar\\Documents\\study\\P-8-24-Study\\3 Kypc\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
-        "packagesPath": "C:\\Users\\nazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nazar\\Documents\\study\\P-8-24-Study\\3 Kypc\\RPM ASP.NET\\API First Lesson\\API First Lesson\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,11 +26,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -45,12 +45,21 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -83,6 +92,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -91,7 +118,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.316/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

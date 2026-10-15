@@ -1,4 +1,5 @@
 using API_First_Lesson.Models;
+using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
@@ -7,97 +8,79 @@ namespace API_First_Lesson.Controllers
     [ApiController]
     public class RoleController : ControllerBase
     {
-        private readonly WebAppContext _context;
+        private readonly IRoleService _roleService;
 
-        public RoleController(WebAppContext context)
+        public RoleController(IRoleService roleService)
         {
-            _context = context;
+            _roleService = roleService;
         }
 
         [HttpGet]
-        public IActionResult GetRoles(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> GetRoles(int page = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var roles = _context.Roles
-                .OrderBy(r => r.RoleId)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-
-            return Ok(roles.Select(ToDto).ToList());
+            var (items, total) = await _roleService.GetAllAsync(page, pageSize, cancellationToken);
+            Response.Headers["X-Total-Count"] = total.ToString();
+            return Ok(items);
         }
 
-
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
         {
-            var role = _context.Roles.FirstOrDefault(r => r.RoleId == id);
+            var role = await _roleService.GetByIdAsync(id, cancellationToken);
             if (role is null) return NotFound();
-
-            return Ok(ToDto(role));
+            return Ok(role);
         }
 
         [HttpPost]
-        public IActionResult Create(RoleCreateDTO dto)
+        public async Task<IActionResult> Create(RoleCreateDTO dto, CancellationToken cancellationToken)
         {
-            var role = new Role
+            try
             {
-                RoleName = dto.RoleName
-            };
-
-            _context.Roles.Add(role);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetById), new { id = role.RoleId }, ToDto(role));
+                var role = await _roleService.CreateAsync(dto, cancellationToken);
+                return CreatedAtAction(nameof(GetById), new { id = role.RoleId }, role);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
-
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, RoleUpdateDTO dto)
+        public async Task<IActionResult> Update(int id, RoleUpdateDTO dto, CancellationToken cancellationToken)
         {
-            var role = _context.Roles.FirstOrDefault(r => r.RoleId == id);
-            if (role is null) return NotFound();
-
-            role.RoleName = dto.RoleName;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var role = await _roleService.UpdateAsync(id, dto, cancellationToken);
+                if (role is null) return NotFound();
+                return Ok(role);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
-
 
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, RolePatchDTO dto)
+        public async Task<IActionResult> Patch(int id, RolePatchDTO dto, CancellationToken cancellationToken)
         {
-            var role = _context.Roles.FirstOrDefault(r => r.RoleId == id);
-            if (role is null) return NotFound();
-
-            if (dto.RoleName is not null) role.RoleName = dto.RoleName;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var role = await _roleService.PatchAsync(id, dto, cancellationToken);
+                if (role is null) return NotFound();
+                return Ok(role);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
-
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
-            var role = _context.Roles.FirstOrDefault(r => r.RoleId == id);
-            if (role is null) return NotFound();
-
-            _context.Roles.Remove(role);
-            _context.SaveChanges();
-
+            var deleted = await _roleService.DeleteAsync(id, cancellationToken);
+            if (!deleted) return NotFound();
             return NoContent();
-        }
-
-        private RoleDTO ToDto(Role role)
-        {
-            return new RoleDTO
-            {
-                RoleId = role.RoleId,
-                RoleName = role.RoleName
-            };
         }
     }
 }

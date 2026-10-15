@@ -1,4 +1,5 @@
 using API_First_Lesson.Models;
+using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
@@ -7,105 +8,79 @@ namespace API_First_Lesson.Controllers
     [ApiController]
     public class OrderItemController : ControllerBase
     {
-        private readonly WebAppContext _context;
+        private readonly IOrderItemService _orderItemService;
 
-        public OrderItemController(WebAppContext context)
+        public OrderItemController(IOrderItemService orderItemService)
         {
-            _context = context;
+            _orderItemService = orderItemService;
         }
 
         [HttpGet]
-        public IActionResult GetOrderItems(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> GetOrderItems(int page = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var orderItems = _context.OrderItems
-                .OrderBy(oi => oi.OrderItemId)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-
-            return Ok(orderItems.Select(ToDto).ToList());
+            var (items, total) = await _orderItemService.GetAllAsync(page, pageSize, cancellationToken);
+            Response.Headers["X-Total-Count"] = total.ToString();
+            return Ok(items);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
         {
-            var orderItem = _context.OrderItems.FirstOrDefault(oi => oi.OrderItemId == id);
+            var orderItem = await _orderItemService.GetByIdAsync(id, cancellationToken);
             if (orderItem is null) return NotFound();
-
-            return Ok(ToDto(orderItem));
+            return Ok(orderItem);
         }
 
         [HttpPost]
-        public IActionResult Create(OrderItemCreateDTO dto)
+        public async Task<IActionResult> Create(OrderItemCreateDTO dto, CancellationToken cancellationToken)
         {
-            var orderItem = new OrderItem
+            try
             {
-                OrderId = dto.OrderId,
-                ProductId = dto.ProductId,
-                Quantity = dto.Quantity,
-                PriceAtPurchase = dto.PriceAtPurchase
-            };
-
-            _context.OrderItems.Add(orderItem);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetById), new { id = orderItem.OrderItemId }, ToDto(orderItem));
+                var orderItem = await _orderItemService.CreateAsync(dto, cancellationToken);
+                return CreatedAtAction(nameof(GetById), new { id = orderItem.OrderItemId }, orderItem);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, OrderItemUpdateDTO dto)
+        public async Task<IActionResult> Update(int id, OrderItemUpdateDTO dto, CancellationToken cancellationToken)
         {
-            var orderItem = _context.OrderItems.FirstOrDefault(oi => oi.OrderItemId == id);
-            if (orderItem is null) return NotFound();
-
-            orderItem.OrderId = dto.OrderId;
-            orderItem.ProductId = dto.ProductId;
-            orderItem.Quantity = dto.Quantity;
-            orderItem.PriceAtPurchase = dto.PriceAtPurchase;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var orderItem = await _orderItemService.UpdateAsync(id, dto, cancellationToken);
+                if (orderItem is null) return NotFound();
+                return Ok(orderItem);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, OrderItemPatchDTO dto)
+        public async Task<IActionResult> Patch(int id, OrderItemPatchDTO dto, CancellationToken cancellationToken)
         {
-            var orderItem = _context.OrderItems.FirstOrDefault(oi => oi.OrderItemId == id);
-            if (orderItem is null) return NotFound();
-
-            if (dto.OrderId is not null) orderItem.OrderId = dto.OrderId.Value;
-            if (dto.ProductId is not null) orderItem.ProductId = dto.ProductId.Value;
-            if (dto.Quantity is not null) orderItem.Quantity = dto.Quantity.Value;
-            if (dto.PriceAtPurchase is not null) orderItem.PriceAtPurchase = dto.PriceAtPurchase.Value;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var orderItem = await _orderItemService.PatchAsync(id, dto, cancellationToken);
+                if (orderItem is null) return NotFound();
+                return Ok(orderItem);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
-            var orderItem = _context.OrderItems.FirstOrDefault(oi => oi.OrderItemId == id);
-            if (orderItem is null) return NotFound();
-
-            _context.OrderItems.Remove(orderItem);
-            _context.SaveChanges();
-
+            var deleted = await _orderItemService.DeleteAsync(id, cancellationToken);
+            if (!deleted) return NotFound();
             return NoContent();
-        }
-
-        private OrderItemDTO ToDto(OrderItem orderItem)
-        {
-            return new OrderItemDTO
-            {
-                OrderItemId = orderItem.OrderItemId,
-                OrderId = orderItem.OrderId,
-                ProductId = orderItem.ProductId,
-                Quantity = orderItem.Quantity,
-                PriceAtPurchase = orderItem.PriceAtPurchase
-            };
         }
     }
 }

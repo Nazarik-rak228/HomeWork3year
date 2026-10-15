@@ -10,6 +10,10 @@ namespace API_First_Lesson.Models
 
         public int RoleId { get; set; }
 
+        public string? RoleName { get; set; }
+
+        public int? CartId { get; set; }
+
         public bool IsActive { get; set; }
     }
 }

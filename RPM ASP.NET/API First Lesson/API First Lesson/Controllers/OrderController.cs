@@ -1,4 +1,5 @@
 using API_First_Lesson.Models;
+using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
@@ -7,98 +8,93 @@ namespace API_First_Lesson.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly WebAppContext _context;
+        private readonly IOrderService _orderService;
 
-        public OrderController(WebAppContext context)
+        public OrderController(IOrderService orderService)
         {
-            _context = context;
+            _orderService = orderService;
         }
 
         [HttpGet]
-        public IActionResult GetOrders(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> GetOrders(int page = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var orders = _context.Orders
-                .OrderBy(o => o.OrderId)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-
-            return Ok(orders.Select(ToDto).ToList());
+            var (items, total) = await _orderService.GetAllAsync(page, pageSize, cancellationToken);
+            Response.Headers["X-Total-Count"] = total.ToString();
+            return Ok(items);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
         {
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
+            var order = await _orderService.GetByIdAsync(id, cancellationToken);
             if (order is null) return NotFound();
-
-            return Ok(ToDto(order));
+            return Ok(order);
         }
+
         [HttpPost]
-        public IActionResult Create(OrderCreateDTO dto)
+        public async Task<IActionResult> Create(OrderCreateDTO dto, CancellationToken cancellationToken)
         {
-            var order = new Order
+            try
             {
-                UserId = dto.UserId,
-                TotalAmount = dto.TotalAmount,
-                OrderDate = DateTime.UtcNow
-            };
-
-            _context.Orders.Add(order);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetById), new { id = order.OrderId }, ToDto(order));
+                var order = await _orderService.CreateAsync(dto, cancellationToken);
+                return CreatedAtAction(nameof(GetById), new { id = order.OrderId }, order);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, OrderUpdateDTO dto)
+        public async Task<IActionResult> Update(int id, OrderUpdateDTO dto, CancellationToken cancellationToken)
         {
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
-            if (order is null) return NotFound();
-
-            order.UserId = dto.UserId;
-            order.TotalAmount = dto.TotalAmount;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var order = await _orderService.UpdateAsync(id, dto, cancellationToken);
+                if (order is null) return NotFound();
+                return Ok(order);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, OrderPatchDTO dto)
+        public async Task<IActionResult> Patch(int id, OrderPatchDTO dto, CancellationToken cancellationToken)
         {
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
-            if (order is null) return NotFound();
-
-            if (dto.UserId is not null) order.UserId = dto.UserId.Value;
-            if (dto.TotalAmount is not null) order.TotalAmount = dto.TotalAmount.Value;
-
-            _context.SaveChanges();
-
-            return NoContent();
+            try
+            {
+                var order = await _orderService.PatchAsync(id, dto, cancellationToken);
+                if (order is null) return NotFound();
+                return Ok(order);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
-            if (order is null) return NotFound();
-
-            _context.Orders.Remove(order);
-            _context.SaveChanges();
-
+            var deleted = await _orderService.DeleteAsync(id, cancellationToken);
+            if (!deleted) return NotFound();
             return NoContent();
         }
 
-        private OrderDTO ToDto(Order order)
+        [HttpPost("place")]
+        public async Task<IActionResult> Place(PlaceOrderDTO dto, CancellationToken cancellationToken)
         {
-            return new OrderDTO
+            try
             {
-                OrderId = order.OrderId,
-                UserId = order.UserId,
-                OrderDate = order.OrderDate,
-                TotalAmount = order.TotalAmount
-            };
+                var order = await _orderService.PlaceAsync(dto, cancellationToken);
+                return CreatedAtAction(nameof(GetById), new { id = order.OrderId }, order);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
     }
 }

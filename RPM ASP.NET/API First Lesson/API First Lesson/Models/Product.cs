@@ -19,9 +19,13 @@ public partial class Product
 
     public string? ImageMimeType { get; set; }
 
+    public int Stock { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual Category Category { get; set; } = null!;
+
+    public virtual ICollection<OrderEvent> OrderEvents { get; set; } = new List<OrderEvent>();
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

@@ -23,6 +23,8 @@ public partial class WebAppContext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
+    public virtual DbSet<OrderEvent> OrderEvents { get; set; }
+
     public virtual DbSet<OrderItem> OrderItems { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
@@ -30,10 +32,6 @@ public partial class WebAppContext : DbContext
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=BENITO\\SQLEXPRESS;Initial Catalog=WebApp;Integrated Security=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -92,6 +90,9 @@ public partial class WebAppContext : DbContext
             entity.Property(e => e.OrderDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .HasDefaultValue(OrderStatuses.Pending);
             entity.Property(e => e.TotalAmount).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.UserId).HasColumnName("UserID");
 
@@ -99,6 +100,35 @@ public partial class WebAppContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Orders__UserID__5165187F");
+        });
+
+        modelBuilder.Entity<OrderEvent>(entity =>
+        {
+            entity.HasKey(e => e.OrderEventId).HasName("PK__OrderEvents__OrderEventID");
+
+            entity.Property(e => e.OrderEventId).HasColumnName("OrderEventID");
+            entity.Property(e => e.EventDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.EventType).HasMaxLength(50);
+            entity.Property(e => e.OrderId).HasColumnName("OrderID");
+            entity.Property(e => e.ProductId).HasColumnName("ProductID");
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.Order).WithMany(p => p.OrderEvents)
+                .HasForeignKey(d => d.OrderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__OrderEvents__OrderID");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.OrderEvents)
+                .HasForeignKey(d => d.ProductId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__OrderEvents__ProductID");
+
+            entity.HasOne(d => d.User).WithMany(p => p.OrderEvents)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__OrderEvents__UserID");
         });
 
         modelBuilder.Entity<OrderItem>(entity =>
@@ -133,6 +163,7 @@ public partial class WebAppContext : DbContext
             entity.Property(e => e.ImageMimeType).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.ProductName).HasMaxLength(200);
+            entity.Property(e => e.Stock).HasDefaultValue(0);
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)

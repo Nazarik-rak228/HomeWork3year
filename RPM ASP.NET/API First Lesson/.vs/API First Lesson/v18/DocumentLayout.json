@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\orderitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\orderitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderItemController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderItemController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\OrderItemController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderItemController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\OrderItemController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\CartItemController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\CartItemController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "API First Lesson\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\UserController.cs",
+              "RelativeToolTip": "API First Lesson\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAswHIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:11:24.581Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

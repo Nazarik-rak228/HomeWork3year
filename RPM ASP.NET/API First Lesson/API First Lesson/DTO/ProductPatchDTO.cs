@@ -8,6 +8,8 @@ namespace API_First_Lesson.Models
 
         public int? CategoryId { get; set; }
 
+        public int? Stock { get; set; }
+
         public string? Discription { get; set; }
 
         public byte[]? ImageData { get; set; }
