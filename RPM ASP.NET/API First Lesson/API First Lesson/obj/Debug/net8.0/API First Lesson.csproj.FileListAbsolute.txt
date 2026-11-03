@@ -693,3 +693,11 @@ C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First 
 C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\obj\Debug\net8.0\API Firs.9A2C0C9C.Up2Date
 C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\obj\Debug\net8.0\API First Lesson.genruntimeconfig.cache
 C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\obj\Debug\net8.0\ref\API First Lesson.dll
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\JWT.dll
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\frontend\frontend\.oxlintrc.json
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\frontend\frontend\package-lock.json
+C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\frontend\frontend\package.json

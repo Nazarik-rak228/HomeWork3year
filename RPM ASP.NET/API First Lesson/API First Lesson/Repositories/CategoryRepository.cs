@@ -12,25 +12,23 @@ public class CategoryRepository : ICategoryRepository
         _context = context;
     }
 
-    private IQueryable<Category> Query() => _context.Categories;
-
     public async Task<List<Category>> GetAllAsync(int page, int pageSize, CancellationToken ct)
     {
-        return await Query()
+        return await _context.Categories
             .OrderBy(c => c.CategoryId)
-            .Skip(Math.Max(page - 1, 0) * pageSize)
+            .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
     }
 
     public async Task<int> CountAsync(CancellationToken ct)
     {
-        return await Query().CountAsync(ct);
+        return await _context.Categories.CountAsync(ct);
     }
 
     public async Task<Category?> GetByIdAsync(int id, CancellationToken ct)
     {
-        return await Query().FirstOrDefaultAsync(c => c.CategoryId == id, ct);
+        return await _context.Categories.FirstOrDefaultAsync(c => c.CategoryId == id, ct);
     }
 
     public async Task AddAsync(Category category)

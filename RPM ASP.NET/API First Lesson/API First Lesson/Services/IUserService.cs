@@ -4,6 +4,8 @@ namespace API_First_Lesson.Services;
 
 public interface IUserService
 {
+    Task<User> RegisterAsync(string username, string password);
+    Task<User?> ValidateCredentialsAsync(string username, string password);
     Task<(List<UserDTO> Items, int TotalCount)> GetAllAsync(int page, int pageSize, CancellationToken ct);
 
     Task<UserDTO?> GetByIdAsync(int id, CancellationToken ct);

@@ -12,26 +12,26 @@ public class ProductRepository : IProductRepository
         _context = context;
     }
 
-    private IQueryable<Product> Query() => _context.Products
-        .Include(p => p.Category);
-
     public async Task<List<Product>> GetAllAsync(int page, int pageSize, CancellationToken ct)
     {
-        return await Query()
+        return await _context.Products
+            .Include(p => p.Category)
             .OrderBy(p => p.ProductId)
-            .Skip(Math.Max(page - 1, 0) * pageSize)
+            .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
     }
 
     public async Task<int> CountAsync(CancellationToken ct)
     {
-        return await Query().CountAsync(ct);
+        return await _context.Products.CountAsync(ct);
     }
 
     public async Task<Product?> GetByIdAsync(int id, CancellationToken ct)
     {
-        return await Query().FirstOrDefaultAsync(p => p.ProductId == id, ct);
+        return await _context.Products
+            .Include(p => p.Category)
+            .FirstOrDefaultAsync(p => p.ProductId == id, ct);
     }
 
     public async Task<Category?> FindCategoryAsync(int categoryId, CancellationToken ct)

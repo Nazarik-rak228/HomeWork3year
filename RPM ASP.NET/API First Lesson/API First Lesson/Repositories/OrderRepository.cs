@@ -12,28 +12,30 @@ public class OrderRepository : IOrderRepository
         _context = context;
     }
 
-    private IQueryable<Order> Query() => _context.Orders
-        .Include(o => o.User)
-        .Include(o => o.OrderItems)
-            .ThenInclude(i => i.Product);
-
     public async Task<List<Order>> GetAllAsync(int page, int pageSize, CancellationToken ct)
     {
-        return await Query()
+        return await _context.Orders
+            .Include(o => o.User)
+            .Include(o => o.OrderItems)
+                .ThenInclude(i => i.Product)
             .OrderBy(o => o.OrderId)
-            .Skip(Math.Max(page - 1, 0) * pageSize)
+            .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
     }
 
     public async Task<int> CountAsync(CancellationToken ct)
     {
-        return await Query().CountAsync(ct);
+        return await _context.Orders.CountAsync(ct);
     }
 
     public async Task<Order?> GetByIdAsync(int id, CancellationToken ct)
     {
-        return await Query().FirstOrDefaultAsync(o => o.OrderId == id, ct);
+        return await _context.Orders
+            .Include(o => o.User)
+            .Include(o => o.OrderItems)
+                .ThenInclude(i => i.Product)
+            .FirstOrDefaultAsync(o => o.OrderId == id, ct);
     }
 
     public async Task<User?> FindUserAsync(int userId, CancellationToken ct)

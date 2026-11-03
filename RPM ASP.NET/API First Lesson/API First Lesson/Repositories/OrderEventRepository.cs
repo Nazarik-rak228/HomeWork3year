@@ -12,28 +12,30 @@ public class OrderEventRepository : IOrderEventRepository
         _context = context;
     }
 
-    private IQueryable<OrderEvent> Query() => _context.OrderEvents
-        .Include(e => e.Order)
-        .Include(e => e.User)
-        .Include(e => e.Product);
-
     public async Task<List<OrderEvent>> GetAllAsync(int page, int pageSize, CancellationToken ct)
     {
-        return await Query()
+        return await _context.OrderEvents
+            .Include(e => e.Order)
+            .Include(e => e.User)
+            .Include(e => e.Product)
             .OrderBy(e => e.OrderEventId)
-            .Skip(Math.Max(page - 1, 0) * pageSize)
+            .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
     }
 
     public async Task<int> CountAsync(CancellationToken ct)
     {
-        return await Query().CountAsync(ct);
+        return await _context.OrderEvents.CountAsync(ct);
     }
 
     public async Task<OrderEvent?> GetByIdAsync(int id, CancellationToken ct)
     {
-        return await Query().FirstOrDefaultAsync(e => e.OrderEventId == id, ct);
+        return await _context.OrderEvents
+            .Include(e => e.Order)
+            .Include(e => e.User)
+            .Include(e => e.Product)
+            .FirstOrDefaultAsync(e => e.OrderEventId == id, ct);
     }
 
     public async Task<Order?> FindOrderAsync(int orderId, CancellationToken ct)
@@ -53,7 +55,7 @@ public class OrderEventRepository : IOrderEventRepository
 
     public async Task<OrderEvent?> FindActiveReserveAsync(int productId, CancellationToken ct)
     {
-        return await Query()
+        return await _context.OrderEvents
             .Where(e => e.ProductId == productId && e.EventType == OrderEvent.TypeReserve)
             .OrderByDescending(e => e.OrderEventId)
             .FirstOrDefaultAsync(ct);

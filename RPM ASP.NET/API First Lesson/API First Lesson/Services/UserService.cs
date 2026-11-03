@@ -1,6 +1,8 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Repositories;
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_First_Lesson.Services;
 
@@ -9,10 +11,50 @@ public class UserService : IUserService
     private readonly IUserRepository _repository;
     private readonly IMapper _mapper;
 
-    public UserService(IUserRepository repository, IMapper mapper)
+    private readonly WebAppContext _context;
+
+    private readonly PasswordHasher<User> _hasher = new();
+
+    public UserService(WebAppContext context,IUserRepository repository, IMapper mapper)
     {
         _repository = repository;
         _mapper = mapper;
+        _context = context;
+    }
+    public async Task<User> RegisterAsync(string username, string password) 
+    {
+        var all = await _context.Users.AnyAsync(u => u.Username == username);
+        if (all) 
+        {
+            throw new InvalidOperationException($"Login {username} уже используется ");
+        }
+
+        var user = new User
+        {
+            Username = username,
+            RoleId = 2,
+            IsActive = true,
+        };
+
+        user.PasswordHash = _hasher.HashPassword(user, password);
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
+        await _context.Entry(user).Reference(u => u.Role).LoadAsync();
+        return user;
+    }
+
+    public async Task<User?> ValidateCredentialsAsync(string username, string password)
+    {
+        var user = await _context.Users.Include(u => u.Role).FirstOrDefaultAsync(u => u.Username == username && u.IsActive);
+
+        if (user == null) 
+        {
+            return null;
+        }
+        
+        var result = _hasher.VerifyHashedPassword(user, user.PasswordHash, password);
+
+        return result == PasswordVerificationResult.Failed ? null: user;
     }
 
     public async Task<(List<UserDTO> Items, int TotalCount)> GetAllAsync(int page, int pageSize, CancellationToken ct)

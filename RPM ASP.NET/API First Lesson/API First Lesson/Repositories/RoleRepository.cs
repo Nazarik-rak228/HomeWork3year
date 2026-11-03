@@ -12,25 +12,23 @@ public class RoleRepository : IRoleRepository
         _context = context;
     }
 
-    private IQueryable<Role> Query() => _context.Roles;
-
     public async Task<List<Role>> GetAllAsync(int page, int pageSize, CancellationToken ct)
     {
-        return await Query()
+        return await _context.Roles
             .OrderBy(r => r.RoleId)
-            .Skip(Math.Max(page - 1, 0) * pageSize)
+            .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
     }
 
     public async Task<int> CountAsync(CancellationToken ct)
     {
-        return await Query().CountAsync(ct);
+        return await _context.Roles.CountAsync(ct);
     }
 
     public async Task<Role?> GetByIdAsync(int id, CancellationToken ct)
     {
-        return await Query().FirstOrDefaultAsync(r => r.RoleId == id, ct);
+        return await _context.Roles.FirstOrDefaultAsync(r => r.RoleId == id, ct);
     }
 
     public async Task AddAsync(Role role)

@@ -12,27 +12,28 @@ public class CartItemRepository : ICartItemRepository
         _context = context;
     }
 
-    private IQueryable<CartItem> Query() => _context.CartItems
-        .Include(i => i.Cart)
-        .Include(i => i.Product);
-
     public async Task<List<CartItem>> GetAllAsync(int page, int pageSize, CancellationToken ct)
     {
-        return await Query()
+        return await _context.CartItems
+            .Include(i => i.Cart)
+            .Include(i => i.Product)
             .OrderBy(i => i.CartItemId)
-            .Skip(Math.Max(page - 1, 0) * pageSize)
+            .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
     }
 
     public async Task<int> CountAsync(CancellationToken ct)
     {
-        return await Query().CountAsync(ct);
+        return await _context.CartItems.CountAsync(ct);
     }
 
     public async Task<CartItem?> GetByIdAsync(int id, CancellationToken ct)
     {
-        return await Query().FirstOrDefaultAsync(i => i.CartItemId == id, ct);
+        return await _context.CartItems
+            .Include(i => i.Cart)
+            .Include(i => i.Product)
+            .FirstOrDefaultAsync(i => i.CartItemId == id, ct);
     }
 
     public async Task<Cart?> FindCartAsync(int cartId, CancellationToken ct)
