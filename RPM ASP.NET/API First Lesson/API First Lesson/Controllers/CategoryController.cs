@@ -1,5 +1,6 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
@@ -32,6 +33,7 @@ namespace API_First_Lesson.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> Create(CategoryCreateDTO dto, CancellationToken cancellationToken)
         {
             try
@@ -46,6 +48,7 @@ namespace API_First_Lesson.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> Update(int id, CategoryUpdateDTO dto, CancellationToken cancellationToken)
         {
             try
@@ -61,6 +64,7 @@ namespace API_First_Lesson.Controllers
         }
 
         [HttpPatch("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> Patch(int id, CategoryPatchDTO dto, CancellationToken cancellationToken)
         {
             try
@@ -76,6 +80,7 @@ namespace API_First_Lesson.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
             var deleted = await _categoryService.DeleteAsync(id, cancellationToken);

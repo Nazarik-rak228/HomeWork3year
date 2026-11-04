@@ -1,11 +1,13 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Policy = "AdminOnly")]
     public class RoleController : ControllerBase
     {
         private readonly IRoleService _roleService;

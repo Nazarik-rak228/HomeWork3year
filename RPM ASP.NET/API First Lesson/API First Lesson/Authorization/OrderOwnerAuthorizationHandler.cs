@@ -11,7 +11,7 @@ public class OrderOwnerAuthorizationHandler : AuthorizationHandler<OrderOwnerReq
         OrderOwnerRequirement requirement,
         Order resource)
     {
-        // Админ может всё
+ 
         if (context.User.IsInRole("Admin"))
         {
             context.Succeed(requirement);

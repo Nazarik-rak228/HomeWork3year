@@ -82,7 +82,7 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddSingleton<IAuthorizationHandler, OrderOwnerAuthorizationHandler>();
 
-// ===== CORS =====
+
 const string FrontendPolicy = "FrontendPolicy";
 
 var allowedOrigins = builder.Configuration
@@ -95,11 +95,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy(FrontendPolicy, policy =>
     {
         policy
-            .WithOrigins(allowedOrigins)      // только конкретные origins
+            .WithOrigins(allowedOrigins)      
             .AllowAnyHeader()
             .AllowAnyMethod();
-        // НЕ используй AllowAnyOrigin()
-        // .AllowCredentials() — добавляй только если нужны cookies
+
     });
 });
 

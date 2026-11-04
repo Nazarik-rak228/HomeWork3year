@@ -698,6 +698,3 @@ C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First 
 C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\frontend\frontend\.oxlintrc.json
-C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\frontend\frontend\package-lock.json
-C:\Users\user\Desktop\Nazar\LearningRepo\RPM ASP.NET\API First Lesson\API First Lesson\bin\Debug\net8.0\frontend\frontend\package.json

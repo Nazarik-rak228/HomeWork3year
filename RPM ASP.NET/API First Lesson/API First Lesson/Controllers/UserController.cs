@@ -1,11 +1,13 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -46,6 +48,8 @@ namespace API_First_Lesson.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "AdminOnly")]
+       
         public async Task<IActionResult> Update(int id, UserUpdateDTO dto, CancellationToken cancellationToken)
         {
             try
@@ -61,6 +65,8 @@ namespace API_First_Lesson.Controllers
         }
 
         [HttpPatch("{id}")]
+        [Authorize(Policy = "AdminOnly")]
+       
         public async Task<IActionResult> Patch(int id, UserPatchDTO dto, CancellationToken cancellationToken)
         {
             try
@@ -75,7 +81,9 @@ namespace API_First_Lesson.Controllers
             }
         }
 
+        [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{id}")]
+       
         public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
             var deleted = await _userService.DeleteAsync(id, cancellationToken);
