@@ -6,5 +6,6 @@
   "monospaceFontFamily": "Buran USSR",
   "baseFontSize": 18,
   "baseFontSizeAction": true,
-  "accentColor": "#ffffff"
+  "accentColor": "#ffffff",
+  "showRibbon": true
 }

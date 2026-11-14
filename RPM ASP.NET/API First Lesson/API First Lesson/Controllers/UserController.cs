@@ -1,12 +1,14 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Authorization;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersionNeutral]
     [Authorize]
     public class UserController : ControllerBase
     {

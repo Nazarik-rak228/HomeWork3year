@@ -1,109 +1,109 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\",
+  "WorkspaceRootPath": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\authorization\\orderownerauthorizationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\authorization\\orderownerauthorizationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\authorization\\orderownerauthorizationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\authorization\\orderownerrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\authorization\\orderownerrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\authorization\\orderownerrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\ordereventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\ordereventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\ordereventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\swagger\\authorizecheckoperationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\swagger\\authorizecheckoperationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\swagger\\authorizecheckoperationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\api first lesson.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\api first lesson.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\api first lesson.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\dto\\auth\\loginresponcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\dto\\auth\\loginresponcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\dto\\auth\\loginresponcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\dto\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\dto\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\dto\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\dto\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\dto\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\dto\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\dto\\placeorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\dto\\placeorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\dto\\placeorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\users\\user\\desktop\\nazar\\learningrepo\\rpm asp.net\\api first lesson\\api first lesson\\services\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|c:\\repositorieslist\\learning3year\\homework3year\\rpm asp.net\\api first lesson\\api first lesson\\services\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BABF2D6-956C-4439-85D6-41010CC9D58F}|API First Lesson\\API First Lesson.csproj|solutionrelative:api first lesson\\services\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -114,15 +114,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\OrderService.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\OrderService.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\OrderService.cs",
               "RelativeToolTip": "API First Lesson\\Services\\OrderService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -131,39 +135,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\AuthController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDkAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwDkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-03T11:58:06.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\UserController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:51:09.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T13:51:09.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Program.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Program.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Program.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Program.cs",
               "RelativeToolTip": "API First Lesson\\Program.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAjwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-23T06:33:21.983Z",
               "EditorCaption": ""
@@ -172,48 +175,45 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "OrderOwnerAuthorizationHandler.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
               "RelativeToolTip": "API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T13:28:32.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-03T13:28:32.362Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "OrderOwnerRequirement.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
               "RelativeToolTip": "API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T13:28:01.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-03T13:28:01.871Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "OrderEventController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderEventController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderEventController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\OrderEventController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderEventController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderEventController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\OrderEventController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:53:52.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T13:53:52.305Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\RoleController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\RoleController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\RoleController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -223,9 +223,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CategoryController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAwwFIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -235,9 +235,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\ProductController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAwwFMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -247,9 +247,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\CartController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\CartController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -259,9 +259,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderController.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Controllers\\OrderController.cs",
               "RelativeToolTip": "API First Lesson\\Controllers\\OrderController.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAAswIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -271,9 +271,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\appsettings.json",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\appsettings.json",
               "RelativeDocumentMoniker": "API First Lesson\\appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\appsettings.json",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\appsettings.json",
               "RelativeToolTip": "API First Lesson\\appsettings.json",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -283,9 +283,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\IUserService.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\IUserService.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\IUserService.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\IUserService.cs",
               "RelativeToolTip": "API First Lesson\\Services\\IUserService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -295,9 +295,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "AuthorizeCheckOperationFilter.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
               "RelativeToolTip": "API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAswCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -307,9 +307,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "API First Lesson.csproj",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
               "RelativeDocumentMoniker": "API First Lesson\\API First Lesson.csproj",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\API First Lesson.csproj",
               "RelativeToolTip": "API First Lesson\\API First Lesson.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -319,9 +319,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\TokenService.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\TokenService.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\TokenService.cs",
               "RelativeToolTip": "API First Lesson\\Services\\TokenService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAYwB8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -331,9 +331,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "LoginResponceDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
               "RelativeDocumentMoniker": "API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
               "RelativeToolTip": "API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -343,9 +343,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginDTO.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginDTO.cs",
               "RelativeDocumentMoniker": "API First Lesson\\DTO\\Auth\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginDTO.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\LoginDTO.cs",
               "RelativeToolTip": "API First Lesson\\DTO\\Auth\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -355,9 +355,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
               "RelativeToolTip": "API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -367,9 +367,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\ITokenService.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\ITokenService.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Services\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\ITokenService.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\ITokenService.cs",
               "RelativeToolTip": "API First Lesson\\Services\\ITokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -379,9 +379,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Models\\User.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Models\\User.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Models\\User.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Models\\User.cs",
               "RelativeToolTip": "API First Lesson\\Models\\User.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -391,9 +391,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\UserService.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\UserService.cs",
               "RelativeToolTip": "API First Lesson\\Services\\UserService.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAApwDMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -403,9 +403,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "PlaceOrderDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\PlaceOrderDTO.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\PlaceOrderDTO.cs",
               "RelativeDocumentMoniker": "API First Lesson\\DTO\\PlaceOrderDTO.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\PlaceOrderDTO.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\DTO\\PlaceOrderDTO.cs",
               "RelativeToolTip": "API First Lesson\\DTO\\PlaceOrderDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -415,9 +415,9 @@
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Mapping\\MappingProfile.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Mapping\\MappingProfile.cs",
               "RelativeToolTip": "API First Lesson\\Mapping\\MappingProfile.cs",
               "ViewState": "AgIAAFMAAAAAAAAAAAAqwGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -427,9 +427,9 @@
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "CartItemService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\CartItemService.cs",
+              "DocumentMoniker": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\CartItemService.cs",
               "RelativeDocumentMoniker": "API First Lesson\\Services\\CartItemService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Nazar\\LearningRepo\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\CartItemService.cs",
+              "ToolTip": "C:\\RepositoriesList\\Learning3Year\\HomeWork3year\\RPM ASP.NET\\API First Lesson\\API First Lesson\\Services\\CartItemService.cs",
               "RelativeToolTip": "API First Lesson\\Services\\CartItemService.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -1,5 +1,6 @@
 ﻿using API_First_Lesson.DTO.Auth;
 using API_First_Lesson.Services;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 
@@ -8,6 +9,7 @@ namespace API_First_Lesson.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [ApiVersionNeutral]
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;

@@ -35,6 +35,9 @@ public partial class WebAppContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // SQLite не знает getdate(); для него используем CURRENT_TIMESTAMP
+        var nowSql = Database.IsSqlite() ? "CURRENT_TIMESTAMP" : "(getdate())";
+
         modelBuilder.Entity<Cart>(entity =>
         {
             entity.HasKey(e => e.CartId).HasName("PK__Carts__51BCD797D2A7716F");
@@ -43,7 +46,7 @@ public partial class WebAppContext : DbContext
 
             entity.Property(e => e.CartId).HasColumnName("CartID");
             entity.Property(e => e.CreatedDate)
-                .HasDefaultValueSql("(getdate())")
+                .HasDefaultValueSql(nowSql)
                 .HasColumnType("datetime");
             entity.Property(e => e.UserId).HasColumnName("UserID");
 
@@ -88,7 +91,7 @@ public partial class WebAppContext : DbContext
 
             entity.Property(e => e.OrderId).HasColumnName("OrderID");
             entity.Property(e => e.OrderDate)
-                .HasDefaultValueSql("(getdate())")
+                .HasDefaultValueSql(nowSql)
                 .HasColumnType("datetime");
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
@@ -108,7 +111,7 @@ public partial class WebAppContext : DbContext
 
             entity.Property(e => e.OrderEventId).HasColumnName("OrderEventID");
             entity.Property(e => e.EventDate)
-                .HasDefaultValueSql("(getdate())")
+                .HasDefaultValueSql(nowSql)
                 .HasColumnType("datetime");
             entity.Property(e => e.EventType).HasMaxLength(50);
             entity.Property(e => e.OrderId).HasColumnName("OrderID");

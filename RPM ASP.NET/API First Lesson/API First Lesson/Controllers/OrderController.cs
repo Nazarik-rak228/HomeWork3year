@@ -1,6 +1,7 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Services;
 using Microsoft.AspNetCore.Authorization;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -8,6 +9,7 @@ namespace API_First_Lesson.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersionNeutral]
     [Authorize] // все методы требуют токен
     public class OrderController : ControllerBase
     {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 // === ЗАМЕНИ на свой адрес API ===
-const API_URL = 'https://localhost:7070';   // ← сюда свой порт
+const API_URL = 'http://localhost:5260';   // ← сюда свой порт
 
 export default function App() {
   const [username, setUsername] = useState('');
@@ -62,7 +62,6 @@ export default function App() {
       if (res.status === 401) {
         setError('401 Unauthorized — токен невалидный');
         return;
- dual;
       }
       if (res.status === 403) {
         setError('403 Forbidden — нет прав');

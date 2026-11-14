@@ -1,11 +1,13 @@
 using API_First_Lesson.Models;
 using API_First_Lesson.Services;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_First_Lesson.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersionNeutral]
     public class OrderItemController : ControllerBase
     {
         private readonly IOrderItemService _orderItemService;
