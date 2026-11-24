@@ -20,8 +20,51 @@
               "icon": "lucide-file",
               "title": "last work"
             }
+          },
+          {
+            "id": "aa55166f7e2580f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:C:/Trash/installers/Aseprite-v1.3.18.6-Source/INSTALL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "INSTALL"
+            }
+          },
+          {
+            "id": "b817d6179a41ce85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:C:/RepositoriesList/AllRepos/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "2d5724139a179277",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:C:/RepositoriesList/Learning3Year/HomeWork3year/RPM Spring/SushiHub_Monorepo/docs/ОТЧЕТ - SSL и HTTPS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ОТЧЕТ - SSL и HTTPS"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -188,7 +231,7 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "084033169cf5d81b",
+  "active": "2d5724139a179277",
   "lastOpenFiles": [
     "SUMMARY.pdf",
     "English/last work.md",

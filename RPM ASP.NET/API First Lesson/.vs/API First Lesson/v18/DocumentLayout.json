@@ -114,12 +114,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 22,
@@ -131,7 +127,8 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-31T09:46:04.95Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -144,7 +141,7 @@
               "ViewState": "AgIAABkAAAAAAAAAAAAcwDkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-03T11:58:06.057Z",
-              "EditorCaption": ""
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -156,7 +153,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:51:09.511Z"
+              "WhenOpened": "2026-11-04T13:51:09.511Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -169,7 +167,8 @@
               "ViewState": "AgIAAJoAAAAAAAAAAAAjwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-23T06:33:21.983Z",
-              "EditorCaption": ""
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -181,7 +180,8 @@
               "RelativeToolTip": "API First Lesson\\Authorization\\OrderOwnerAuthorizationHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T13:28:32.362Z"
+              "WhenOpened": "2026-11-03T13:28:32.362Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -193,7 +193,8 @@
               "RelativeToolTip": "API First Lesson\\Authorization\\OrderOwnerRequirement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T13:28:01.871Z"
+              "WhenOpened": "2026-11-03T13:28:01.871Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -205,7 +206,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\OrderEventController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:53:52.305Z"
+              "WhenOpened": "2026-11-04T13:53:52.305Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -217,7 +219,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:53:32.783Z"
+              "WhenOpened": "2026-11-04T13:53:32.783Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -229,7 +232,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAwwFIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:50:39.047Z"
+              "WhenOpened": "2026-11-04T13:50:39.047Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -241,7 +245,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAwwFMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:48:55.45Z"
+              "WhenOpened": "2026-11-04T13:48:55.45Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -253,7 +258,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\CartController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T13:48:30.298Z"
+              "WhenOpened": "2026-11-04T13:48:30.298Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -265,7 +271,8 @@
               "RelativeToolTip": "API First Lesson\\Controllers\\OrderController.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAAswIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T13:29:14.414Z"
+              "WhenOpened": "2026-11-03T13:29:14.414Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -277,7 +284,8 @@
               "RelativeToolTip": "API First Lesson\\appsettings.json",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-03T13:26:42.911Z"
+              "WhenOpened": "2026-11-03T13:26:42.911Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -289,7 +297,8 @@
               "RelativeToolTip": "API First Lesson\\Services\\IUserService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:04:55.724Z"
+              "WhenOpened": "2026-11-03T11:04:55.724Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -301,7 +310,8 @@
               "RelativeToolTip": "API First Lesson\\Swagger\\AuthorizeCheckOperationFilter.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAswCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T12:05:04.33Z"
+              "WhenOpened": "2026-11-03T12:05:04.33Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -313,7 +323,8 @@
               "RelativeToolTip": "API First Lesson\\API First Lesson.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-03T13:27:31.753Z"
+              "WhenOpened": "2026-11-03T13:27:31.753Z",
+              "OwnerCaption": "API First Lesson.csproj"
             },
             {
               "$type": "Document",
@@ -325,7 +336,8 @@
               "RelativeToolTip": "API First Lesson\\Services\\TokenService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAYwB8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:47:02.931Z"
+              "WhenOpened": "2026-11-03T11:47:02.931Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -337,7 +349,8 @@
               "RelativeToolTip": "API First Lesson\\DTO\\Auth\\LoginResponceDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:23:06.218Z"
+              "WhenOpened": "2026-11-03T11:23:06.218Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -349,7 +362,8 @@
               "RelativeToolTip": "API First Lesson\\DTO\\Auth\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:22:14.795Z"
+              "WhenOpened": "2026-11-03T11:22:14.795Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -361,7 +375,8 @@
               "RelativeToolTip": "API First Lesson\\DTO\\Auth\\RegisterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:20:05.867Z"
+              "WhenOpened": "2026-11-03T11:20:05.867Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -373,7 +388,8 @@
               "RelativeToolTip": "API First Lesson\\Services\\ITokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:44:40.455Z"
+              "WhenOpened": "2026-11-03T11:44:40.455Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -385,7 +401,8 @@
               "RelativeToolTip": "API First Lesson\\Models\\User.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:13:51.652Z"
+              "WhenOpened": "2026-11-03T11:13:51.652Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -397,7 +414,8 @@
               "RelativeToolTip": "API First Lesson\\Services\\UserService.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAApwDMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T11:08:30.82Z"
+              "WhenOpened": "2026-11-03T11:08:30.82Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -409,7 +427,8 @@
               "RelativeToolTip": "API First Lesson\\DTO\\PlaceOrderDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-31T09:46:38.211Z"
+              "WhenOpened": "2026-10-31T09:46:38.211Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -421,7 +440,8 @@
               "RelativeToolTip": "API First Lesson\\Mapping\\MappingProfile.cs",
               "ViewState": "AgIAAFMAAAAAAAAAAAAqwGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-31T09:14:03.357Z"
+              "WhenOpened": "2026-10-31T09:14:03.357Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
@@ -433,7 +453,8 @@
               "RelativeToolTip": "API First Lesson\\Services\\CartItemService.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T06:03:42.319Z"
+              "WhenOpened": "2026-10-30T06:03:42.319Z",
+              "OwnerCaption": "%2"
             }
           ]
         }
