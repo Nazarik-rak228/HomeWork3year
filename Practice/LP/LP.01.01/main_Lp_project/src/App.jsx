@@ -53,11 +53,11 @@ function App() {
       ) : null }
     </div>
     <div className='card-container'>
-       <Card key={Date.now()} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
-        <Card key={Date.now() + 1} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
-        <Card key={Date.now() + 2} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
-        <Card key={Date.now() + 3} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
-        <Card key={Date.now() + 4} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
+       <Card key={Date.now()}  price={1000} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
+        <Card key={Date.now() + 1}  price={1000} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
+        <Card key={Date.now() + 2} price={1000} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
+        <Card key={Date.now() + 3} price={1000} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
+        <Card key={Date.now() + 4} price={1000} title={"Заглушка"} imageUrl={"https://n1s1.hsmedia.ru/81/51/3e/81513ed38a5e9408891b88c923ceab60/607x597_0xac120003_11829355741615816995.jpg"} />
       {products.map((product, index) => (<Card key={index} title={product.title} imageUrl={product.imageUrl} />))}
     </div>
     </>

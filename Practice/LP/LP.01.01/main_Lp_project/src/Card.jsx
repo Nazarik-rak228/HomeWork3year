@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Card({title, imageUrl}) 
+function Card({title, imageUrl, price}) 
 {
     const [count, setCount] = useState(0)
 
@@ -9,6 +9,7 @@ function Card({title, imageUrl})
         <div className='card'>
             <img src={imageUrl} alt={title} className='card-image' />    
             <h1>{title}</h1>
+             <h1>{price} руб.</h1>
                 <div className="card-buttons">
                 {
                     count > 0 ?<>
