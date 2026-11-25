@@ -9,7 +9,7 @@ function Card({title, imageUrl, price})
         <div className='card'>
             <img src={imageUrl} alt={title} className='card-image' />    
             <h1>{title}</h1>
-             <h1>{price} руб.</h1>
+            <h1>{price} </h1>
                 <div className="card-buttons">
                 {
                     count > 0 ?<>
