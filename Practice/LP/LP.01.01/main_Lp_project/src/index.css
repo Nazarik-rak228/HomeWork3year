@@ -1,0 +1,93 @@
+header {
+    background-color: #d9ff00;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+body {
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: #badb00;
+    font-size: large;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+#root {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 16px 24px;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 432px;
+    min-width: 0;
+    background-color: #efff96;
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid #000000;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 432px));
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.card h1 {
+    font-size: 26px;
+}
+
+.card-buttons,
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.card-button,
+.card-button-main {
+    box-sizing: border-box;
+}
+
+.card-buttons .card-button {
+    width: 56px;
+}
+
+.card-button-main {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.card:hover {
+    background-color: #abb958;
+}
