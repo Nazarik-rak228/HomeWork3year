@@ -45,6 +45,10 @@ function App() {
             <input type="text" value={title} onChange={hendleChange} />
           </label>
           <label>
+            Введите цену продукта:
+            <input type="number" value={price} onChange={hendleChangeImage} />
+          </label>
+          <label>
             Введите ссылку на изображение продукта:
             <input type="text" value={imageUrl} onChange={hendleChangeImage} />
           </label>
